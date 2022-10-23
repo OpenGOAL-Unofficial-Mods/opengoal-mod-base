@@ -98,6 +98,21 @@
   )
 
 (defun movie? ()
+
+      ;; If jak spawned at checkpoint coords, give max small eco so we can try LTS
+
+    (if (=  (-> *target* control trans x) 5511317.0)
+    (begin
+    (set! (-> *target* fact-info-target eco-pill) 50.0)
+    ))
+
+    ;; If jak hp is 0, kill him faster
+    (if (= (-> *target* fact-info-target health) 0.0)
+    (begin
+   (send-event *target* 'attack-invinc #f (static-attack-info ((mode 'melt))))
+    
+    ))
+
   "Are we in a movie?"
   (logtest? (-> *kernel-context* prevent-from-run) (process-mask movie))
   )
@@ -371,9 +386,16 @@
 (defun main-cheats ()
   "Handle cheat codes and timeout"
 
+  (when (and (cpad-hold? 0 up)
+             )
+              (send-event *target* 'attack-invinc #f (static-attack-info ((mode 'melt))))
+              ;; not in demo
+             )
+
   ;; look for codes when L3 is pushed
   (when (and (cpad-hold? 0 l3)
              (or *cheat-mode* (= *kernel-boot-message* 'play)) ;; not in demo
+             
              )
 
     ;; cheat mode

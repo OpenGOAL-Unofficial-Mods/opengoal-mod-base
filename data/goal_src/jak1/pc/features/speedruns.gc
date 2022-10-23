@@ -39,3 +39,25 @@
                                      (-> *pc-settings* cutscene-skips?))
                       buf 0 (- 224 (* 8 4)) (font-color flat-yellow) (font-flags shadow kerning))))
   (none))
+
+
+(defun speedrun-practice-LTS-start-run ()
+  ;; randomize game id so the autosplitter knows to restart
+  (update-autosplit-jak1-new-game)
+  ;; spawn at the warp gate checkpoint
+  (initialize! *game-info* 'game (the-as game-save #f) "lavatube-start")
+  ;; disable hints (this seems to be overriden by your slot 1 save though)
+  (set! (-> *setting-control* default play-hints) #f)
+  ;; ensure `force actors` is not enabled
+  (set! (-> *pc-settings* force-actors?) #f)
+  ;; force FPS to `60`
+  (set-frame-rate! *pc-settings* 60)
+  ;; skip intro cutscene
+  (close-specific-task! (game-task intro) (task-status need-resolution))
+  ;; enable auto saving by default
+  (set! (-> *setting-control* default auto-save) #t)
+  (suspend)
+  ;;Increase Jak HP
+  (set! (-> *target* fact-info-target eco-pill) 50.0)
+   (pickup-collectable! (-> *target* fact-info-target)(pickup-type eco-green)(-> *FACT-bank* health-small-inc)(process->handle (-> (-> *target* fact-info-target) process)))
+  (none))

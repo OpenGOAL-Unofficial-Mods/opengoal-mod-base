@@ -362,6 +362,9 @@
 (#x1501 "CUTSCENE SKIPS"
         "CUTSCENE SKIPS")
 
+(#x1602 "LAVA TUBE SKIP"
+        "LAVA TUBE SKIP")
+
 ;; -----------------
 ;; test (DO NOT TRANSLATE)
 
