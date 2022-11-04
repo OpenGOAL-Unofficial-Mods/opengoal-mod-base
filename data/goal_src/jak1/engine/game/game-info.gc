@@ -631,7 +631,7 @@
        )
      (-> obj buzzer)
      )
-    (((pickup-type eco-red) (pickup-type eco-blue) (pickup-type eco-yellow))
+    (((pickup-type eco-red) (pickup-type eco-blue) (pickup-type eco-yellow) (pickup-type eco-pink))
      ;; the green vent jumps here.
      (label cfg-80)
 
@@ -702,6 +702,9 @@
             )
            (((pickup-type eco-red))
             (sound-play "get-red-eco")
+            )
+           (((pickup-type eco-pink))
+            (sound-play "get-green-eco")
             )
            )
          )

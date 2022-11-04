@@ -457,6 +457,7 @@
   (eco-red)
   (eco-blue)
   (eco-green)
+  (eco-pink)
   (money)
   (fuel-cell)
   (eco-pill)
@@ -21773,6 +21774,14 @@
   )
 
 (deftype eco-blue (eco)
+  ()
+  :heap-base #x130
+  :method-count-assert 31
+  :size-assert         #x194
+  :flag-assert         #x1f01300194
+  )
+
+(deftype eco-pink (eco)
   ()
   :heap-base #x130
   :method-count-assert 31

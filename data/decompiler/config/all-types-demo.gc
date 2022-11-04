@@ -14725,6 +14725,13 @@
   :flag-assert         #x0
   ;;  not enough basic ops
   )
+(deftype eco-pink (UNKNOWN)
+  ()
+  :method-count-assert 0
+  :size-assert         #x0
+  :flag-assert         #x0
+  ;;  not enough basic ops
+  )
 
 (deftype eco-blue (UNKNOWN)
   ()
