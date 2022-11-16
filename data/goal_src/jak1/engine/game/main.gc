@@ -155,7 +155,7 @@
 
        ;; activate the progress menu.
        (when (not *progress-process*)
-         (activate-progress *dproc* (progress-screen fuel-cell))
+         (activate-progress *dproc* (progress-screen settings))
          (if (not *progress-process*)
              (set-master-mode 'game)
              )

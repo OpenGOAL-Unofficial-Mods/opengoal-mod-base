@@ -1,20 +1,59 @@
 ;;-*-Lisp-*-
 (in-package goal)
 
+(define-extern speedrun-practice-spawn (function none)) ;; defined at end of this file
+
+(defenum speedrun-practice-option
+  :type uint8
+  (none)
+  (lts-old)
+  (lts-new)
+  (sfb)
+  (fcs)
+  (misty-boosted)
+  (boulderskip)
+  (piggyback)
+  (buttonskip)
+  (gondola-flut)
+  (gondola-foot)
+  )
+
+;; track player's last selection for fast reset (L3+R3)
+(define *last-speedrun-practice-option* (speedrun-practice-option none))
+(define *practice-spawn-post-init* (the-as (function none) #f))
+(define *last-reset* (current-time))
+
 (defun speedrun-mode-update ()
   "A per frame update for speedrunning related stuff"
   (when (-> *pc-settings* speedrunner-mode?)
     ;; Update auto-splitter
     (update-autosplit-info-jak1)
     ;; Draw info to the screen
-    (speedrun-draw-settings))
+    ;; (speedrun-draw-settings)
+
+    ;; call post-init function
+    (when (and *practice-spawn-post-init*
+               *target*
+               (-> *setting-control* current allow-pause)
+               (>= (- (-> *display* base-frame-counter) (-> *game-info* blackout-time)) (seconds 0.1))
+               )
+      (*practice-spawn-post-init*)
+      (set! *practice-spawn-post-init* #f)
+      )
+
+    ;; Check for fast reset combo
+    (when (and (cpad-hold? 0 l3)
+             (cpad-hold? 0 r3)
+             (>= (the-as int (- (current-time) *last-reset*)) (seconds 0.5))
+             )
+      (format #t "player triggered l3/r3 combo~%")
+      (set! *last-reset* (current-time))
+      (speedrun-practice-spawn)
+      )
+    )
   (none))
 
-(defun speedrun-start-run ()
-  ;; randomize game id so the autosplitter knows to restart
-  (update-autosplit-jak1-new-game)
-  ;; spawn at the warp gate checkpoint
-  (initialize! *game-info* 'game (the-as game-save #f) "game-start")
+(defun speedrun-reset-common-settings ()
   ;; disable hints (this seems to be overriden by your slot 1 save though)
   (set! (-> *setting-control* default play-hints) #f)
   ;; ensure `force actors` is not enabled
@@ -23,9 +62,19 @@
   (set-frame-rate! *pc-settings* 60)
   ;; skip intro cutscene
   (close-specific-task! (game-task intro) (task-status need-resolution))
+  (none)
+  )
+
+(defun speedrun-start-run ()
+  ;; randomize game id so the autosplitter knows to restart
+  (update-autosplit-jak1-new-game)
+  ;; spawn at the warp gate checkpoint
+  (initialize! *game-info* 'game (the-as game-save #f) "game-start")
+  (speedrun-reset-common-settings)
   ;; enable auto saving by default
   (set! (-> *setting-control* default auto-save) #t)
-  (none))
+  (none)
+  )
 
 (defun speedrun-draw-settings ()
   "Draw speedrun related settings in the bottom left corner"
@@ -40,24 +89,144 @@
                       buf 0 (- 224 (* 8 4)) (font-color flat-yellow) (font-flags shadow kerning))))
   (none))
 
+(defun full-hp ()
+  (pickup-collectable! (-> *target* fact-info-target) (pickup-type eco-green) 1.0 (process->handle (-> *target* fact-info-target process)))
+  (pickup-collectable! (-> *target* fact-info-target) (pickup-type eco-green) 1.0 (process->handle (-> *target* fact-info-target process)))
+  (pickup-collectable! (-> *target* fact-info-target) (pickup-type eco-green) 1.0 (process->handle (-> *target* fact-info-target process)))
+  (pickup-collectable! (-> *target* fact-info-target) (pickup-type eco-green) 1.0 (process->handle (-> *target* fact-info-target process)))
+  (none)
+  )
 
-(defun speedrun-practice-LTS-start-run ()
+(defun get-on-flutflut ()
+  (send-event *target* 'change-mode 'flut #f)
+  (none)
+  )
+
+(defun speedrun-practice-last-checkpoint ()
+  (initialize! *game-info* 'die (the-as game-save #f) (the-as string #f))
+  (none)
+  )
+
+(defun speedrun-practice-LTS-old-start-run ()
+  (set! *practice-spawn-post-init* full-hp)
+  (initialize! *game-info* 'game (the-as game-save #f) "village3-lts-old")
+  (set! (-> *game-info* current-continue) (get-continue-by-name *game-info* "village3-lts-old"))
+  (speedrun-reset-common-settings)
+  (none)
+  )
+
+(defun speedrun-practice-LTS-new-start-run ()
+  (set! *practice-spawn-post-init* full-hp)
+  (initialize! *game-info* 'game (the-as game-save #f) "village3-lts-new")
+  (set! (-> *game-info* current-continue) (get-continue-by-name *game-info* "village3-lts-new"))
+  (speedrun-reset-common-settings)
+  (none)
+  )
+
+(defun speedrun-practice-SFB-start-run ()
+  (initialize! *game-info* 'game (the-as game-save #f) "lavatube-sfb")
+  (set! (-> *game-info* current-continue) (get-continue-by-name *game-info* "lavatube-sfb"))
+  (speedrun-reset-common-settings)
+  (none)
+  )
+
+(defun speedrun-practice-FCS-start-run ()
+  (initialize! *game-info* 'game (the-as game-save #f) "firecanyon-start")
+  (set! (-> *game-info* current-continue) (get-continue-by-name *game-info* "firecanyon-start"))
+  (speedrun-reset-common-settings)
+  (none)
+  )
+
+(defun speedrun-practice-misty-boosted-start-run ()
+  (initialize! *game-info* 'game (the-as game-save #f) "misty-boosted")
+  (set! (-> *game-info* current-continue) (get-continue-by-name *game-info* "misty-boosted"))
+  (speedrun-reset-common-settings)
+  (none)
+  )
+
+(defun speedrun-practice-boulderskip-start-run ()
+  (initialize! *game-info* 'game (the-as game-save #f) "village2-boulderskip")
+  (set! (-> *game-info* current-continue) (get-continue-by-name *game-info* "village2-boulderskip"))
+  (speedrun-reset-common-settings)
+  (none)
+  )
+
+(defun speedrun-practice-piggyback-start-run ()
+  (initialize! *game-info* 'game (the-as game-save #f) "sunken-piggyback")
+  (set! (-> *game-info* current-continue) (get-continue-by-name *game-info* "sunken-piggyback"))
+  (speedrun-reset-common-settings)
+  (none)
+  )
+
+(defun speedrun-practice-buttonskip-start-run ()
+  (initialize! *game-info* 'game (the-as game-save #f) "sunken-buttonskip")
+  (set! (-> *game-info* current-continue) (get-continue-by-name *game-info* "sunken-buttonskip"))
+  (speedrun-reset-common-settings)
+  (none)
+  )
+  
+(defun speedrun-practice-gondola-flut-start-run ()
+  (set! *practice-spawn-post-init* get-on-flutflut)
+  (initialize! *game-info* 'game (the-as game-save #f) "snow-gondola-flut")
+  (set! (-> *game-info* current-continue) (get-continue-by-name *game-info* "snow-gondola-flut"))
+  (speedrun-reset-common-settings)
+  (none)
+  )
+
+(defun speedrun-practice-gondola-foot-start-run ()
+  (initialize! *game-info* 'game (the-as game-save #f) "snow-gondola-foot")
+  (set! (-> *game-info* current-continue) (get-continue-by-name *game-info* "snow-gondola-foot"))
+  (speedrun-reset-common-settings)
+  (none)
+  )
+
+
+
+
+(defun speedrun-practice-spawn ()
+  ;; enable speedrunner mode
+  (set! (-> *pc-settings* speedrunner-mode?) #t)
   ;; randomize game id so the autosplitter knows to restart
   (update-autosplit-jak1-new-game)
-  ;; spawn at the warp gate checkpoint
-  (initialize! *game-info* 'game (the-as game-save #f) "lavatube-start")
-  ;; disable hints (this seems to be overriden by your slot 1 save though)
-  (set! (-> *setting-control* default play-hints) #f)
-  ;; ensure `force actors` is not enabled
-  (set! (-> *pc-settings* force-actors?) #f)
-  ;; force FPS to `60`
-  (set-frame-rate! *pc-settings* 60)
-  ;; skip intro cutscene
-  (close-specific-task! (game-task intro) (task-status need-resolution))
-  ;; enable auto saving by default
-  (set! (-> *setting-control* default auto-save) #t)
-  (suspend)
-  ;;Increase Jak HP
-  (set! (-> *target* fact-info-target eco-pill) 50.0)
-   (pickup-collectable! (-> *target* fact-info-target)(pickup-type eco-green)(-> *FACT-bank* health-small-inc)(process->handle (-> (-> *target* fact-info-target) process)))
-  (none))
+
+  ;; reset any previous post-target-init callback
+  (set! *practice-spawn-post-init* #f)
+
+  (case *last-speedrun-practice-option*
+    (((speedrun-practice-option lts-old))
+      (speedrun-practice-LTS-old-start-run)
+      )
+    (((speedrun-practice-option lts-new))
+      (speedrun-practice-LTS-new-start-run)
+      )
+    (((speedrun-practice-option sfb))
+      (speedrun-practice-SFB-start-run)
+      )
+    (((speedrun-practice-option fcs))
+      (speedrun-practice-FCS-start-run)
+      )
+    (((speedrun-practice-option misty-boosted))
+      (speedrun-practice-misty-boosted-start-run)
+      )
+    (((speedrun-practice-option boulderskip))
+      (speedrun-practice-boulderskip-start-run)
+      )
+    (((speedrun-practice-option piggyback))
+      (speedrun-practice-piggyback-start-run)
+      )
+    (((speedrun-practice-option buttonskip))
+      (speedrun-practice-buttonskip-start-run)
+      )
+    (((speedrun-practice-option gondola-flut))
+      (speedrun-practice-gondola-flut-start-run)
+      )
+    (((speedrun-practice-option gondola-foot))
+      (speedrun-practice-gondola-foot-start-run)
+      )
+    (else ;; not possible for *last-speedrun-practice-option* to be none yet
+      (speedrun-practice-last-checkpoint)
+      )
+    )
+  
+  (none)
+  )
