@@ -98,21 +98,6 @@
   )
 
 (defun movie? ()
-
-      ;; If jak spawned at checkpoint coords, give max small eco so we can try LTS
-
-    (if (=  (-> *target* control trans x) 5511317.0)
-    (begin
-    (set! (-> *target* fact-info-target eco-pill) 50.0)
-    ))
-
-    ;; If jak hp is 0, kill him faster
-    (if (= (-> *target* fact-info-target health) 0.0)
-    (begin
-   (send-event *target* 'attack-invinc #f (static-attack-info ((mode 'melt))))
-    
-    ))
-
   "Are we in a movie?"
   (logtest? (-> *kernel-context* prevent-from-run) (process-mask movie))
   )
@@ -155,7 +140,7 @@
 
        ;; activate the progress menu.
        (when (not *progress-process*)
-         (activate-progress *dproc* (progress-screen settings))
+         (activate-progress *dproc* (progress-screen fuel-cell))
          (if (not *progress-process*)
              (set-master-mode 'game)
              )

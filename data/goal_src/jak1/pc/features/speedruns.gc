@@ -22,6 +22,30 @@
 (define *last-speedrun-practice-option* (speedrun-practice-option none))
 (define *practice-spawn-post-init* (the-as (function none) #f))
 
+(defun get-on-flutflut ()
+  (case (-> *target* state)
+    ((target-flut-stance target-racing)
+      (send-event *target* 'end-mode)
+      )
+    (else
+      (send-event *target* 'change-mode 'flut #f)
+      )
+    )
+  (none)
+  )
+
+(defun get-on-zoomer ()
+  (case (-> *target* state)
+    ((target-flut-stance target-racing)
+      (send-event *target* 'end-mode)
+      )
+    (else
+      (send-event *target* 'change-mode 'racing #f)
+      )
+    )
+  (none)
+  )
+
 (defun speedrun-mode-update ()
   "A per frame update for speedrunning related stuff"
   (when (-> *pc-settings* speedrunner-mode?)
@@ -114,30 +138,6 @@
   (none)
   )
 
-(defun get-on-flutflut ()
-  (case (-> *target* state)
-    ((target-flut-stance target-racing)
-      (send-event *target* 'end-mode)
-      )
-    (else
-      (send-event *target* 'change-mode 'flut #f)
-      )
-    )
-  (none)
-  )
-
-(defun get-on-zoomer ()
-  (case (-> *target* state)
-    ((target-flut-stance target-racing)
-      (send-event *target* 'end-mode)
-      )
-    (else
-      (send-event *target* 'change-mode 'racing #f)
-      )
-    )
-  (none)
-  )
-
 (define *tmp-continue-point* (new 'static 'continue-point
                              :name "tmp"
                              :level #f
@@ -162,7 +162,7 @@
     (*tmp-zoomer?* (set! *practice-spawn-post-init* get-on-zoomer))
     )
   (if (cpad-pressed? 0 l3)  ;; fully reset game if L3 used instead of dpad up
-    (initialize! *game-info* 'game (the-as game-save #f) (the-as string #f))
+    (initialize! *game-info* 'game (the-as game-save #f) "default")
     )
   (set! (-> *game-info* current-continue) *tmp-continue-point*)
   (initialize! *game-info* 'dead (the-as game-save #f) (the-as string #f))

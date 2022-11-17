@@ -524,7 +524,63 @@
     (none)
     )
   :code (behavior ()
-   
+    (while (!= (file-status *art-control* (-> self next-anim name) 0) 'active)
+      (set-blackout-frames (seconds 0.05))
+      (suspend)
+      )
+    (set! (-> *setting-control* current bg-a) 1.0)
+    (set! (-> self camera-anim)
+          (ppointer->handle (process-spawn logo-slave (-> self entity) *ndi-cam-sg* :to self))
+          )
+    (set! (-> self camera)
+          (ppointer->handle
+            (process-spawn
+              othercam
+              (handle->process (-> self camera-anim))
+              3
+              #t
+              'logo
+              :to (handle->process (-> self camera-anim))
+              )
+            )
+          )
+    (send-event (handle->process (-> self camera)) 'mask 0)
+    (set! (-> self volumes)
+          (ppointer->handle (process-spawn logo-slave (-> self entity) *ndi-volumes-sg* :to self))
+          )
+    (send-event (handle->process (-> self volumes)) 'origin-joint-index 3)
+    (set! (-> self target) (ppointer->handle (process-spawn logo-slave #f *jchar-sg* :to self)))
+    (send-event (handle->process (-> self target)) 'blend-shape #t)
+    (send-event (handle->process (-> self target)) 'origin-joint-index 33)
+    (set! (-> self sidekick) (ppointer->handle (process-spawn logo-slave #f *sidekick-sg* :to self)))
+    (send-event (handle->process (-> self sidekick)) 'blend-shape #t)
+    (send-event (handle->process (-> self sidekick)) 'origin-joint-index 6)
+    (set! (-> self anim) (-> self next-anim))
+    (set! (-> self next-anim) (new 'static 'spool-anim :name "logo-intro" :index 5 :parts 3 :command-list '()))
+    (#cond
+      (PC_PORT
+        (cond
+          (*quit-to-title*
+            (set! *quit-to-title* #f))
+          (else
+            (ja-play-spooled-anim
+              (-> self anim)
+              (the-as art-joint-anim #f)
+              (the-as art-joint-anim #f)
+              (the-as (function process-drawable symbol) false-func)
+              ))
+          ))
+      (#t
+        (ja-play-spooled-anim
+          (-> self anim)
+          (the-as art-joint-anim #f)
+          (the-as art-joint-anim #f)
+          (the-as (function process-drawable symbol) false-func)
+          )
+        ))
+    (set! (-> self done?) #t)
+    (set-setting! 'bg-a 'abs 1.0 0)
+    (anim-loop)
     (none)
     )
   :post (behavior ()
@@ -675,12 +731,29 @@
                                       )
                )
          )
-
+        (else
+          (while (!= (file-status *art-control* "ndi-intro" 0) 'active)
+            (set-blackout-frames (seconds 0.05))
+            (suspend)
+            )
+          (let ((s5-1 (-> *display* base-frame-counter)))
+            (until (>= (- (-> *display* base-frame-counter) s5-1) (seconds 0.25))
+              (set-blackout-frames (seconds 0.05))
+              (suspend)
+              )
+            )
+          )
         )
       (label cfg-8)
       (let ((s5-2 (new 'stack-no-clear 'mc-slot-info)))
         (mc-get-slot-info 0 s5-2)
-
+        (when (or (zero? (-> s5-2 known)) (handle->process (the-as int gp-0)))
+          (if (not (handle->process (the-as int gp-0)))
+              (set-blackout-frames (seconds 0.05))
+              )
+          (suspend)
+          (goto cfg-8)
+          )
         (set! (-> *setting-control* default bg-a) 0.0)
         (when (or (zero? (-> s5-2 handle))
                   (and (nonzero? (-> s5-2 formatted)) (zero? (-> s5-2 inited)) (< (-> s5-2 mem-actual) (-> s5-2 mem-required)))
@@ -717,7 +790,11 @@
     (let ((gp-3 (entity-by-name "logo-1")))
       (let ((v1-53 (process-spawn logo gp-3 (-> gp-3 extra trans) 'ndi :to self)))
         (set! (-> self manipy) (the-as (pointer manipy) v1-53))
- 
+        (let ((s5-4 (ppointer->handle v1-53)))
+          (while (handle->process (the-as handle s5-4))
+            (suspend)
+            )
+          )
         )
       (set! (-> self manipy)
             (the-as (pointer manipy) (process-spawn logo gp-3 (-> gp-3 extra trans) 'logo :to self))
@@ -737,10 +814,10 @@
                         (go target-title-wait)
                         )
                        ((= v1-0 'reset)
-                       (go target-title-wait)
+                        (deactivate (-> self manipy 0))
                         )
                        (else
-                         (go target-title-wait)
+                         (target-generic-event-handler arg0 arg1 arg2 arg3)
                          )
                        )
               )
@@ -800,13 +877,13 @@
   :trans (behavior ()
     (hide-hud-quick)
     ;; PAL patch here
-   
+    (when (cpad-pressed? 0 start)
       (set-setting! 'allow-progress #t 0.0 0)
       (apply-settings *setting-control*)
       (activate-progress *dproc* (progress-screen title))
       (set-setting! 'allow-progress #f 0.0 0)
       (apply-settings *setting-control*)
-      
+      )
     (when (and (< (mod (-> *display* real-frame-counter) 300) 270) (not *progress-process*))
       (let ((gp-0
               (new 'stack 'font-context *font-default-matrix* 80 170 0.0 (font-color default) (font-flags shadow kerning))
