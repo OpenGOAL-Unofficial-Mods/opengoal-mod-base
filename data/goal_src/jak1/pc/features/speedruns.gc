@@ -2,6 +2,7 @@
 (in-package goal)
 
 (define-extern speedrun-practice-spawn (function none)) ;; defined at end of this file
+(define-extern speedrun-practice-store-temp-checkpoint (function none)) ;; defined at end of this file
 
 (defenum speedrun-practice-option
   :type uint8
@@ -18,10 +19,8 @@
   (gondola-foot)
   )
 
-;; track player's last selection for fast reset (L3+R3)
 (define *last-speedrun-practice-option* (speedrun-practice-option none))
 (define *practice-spawn-post-init* (the-as (function none) #f))
-(define *last-reset* (current-time))
 
 (defun speedrun-mode-update ()
   "A per frame update for speedrunning related stuff"
@@ -41,17 +40,35 @@
       (set! *practice-spawn-post-init* #f)
       )
 
-    ;; Check for fast reset combo
-    (when (and (cpad-hold? 0 l3)
-             (cpad-hold? 0 r3)
-             (>= (the-as int (- (current-time) *last-reset*)) (seconds 0.5))
+    (when (and (cpad-hold? 0 r3)
              )
-      (format #t "player triggered l3/r3 combo~%")
-      (set! *last-reset* (current-time))
-      (speedrun-practice-spawn)
+      ;; Check for fast reset combo
+      (when (or (cpad-pressed? 0 up) (cpad-pressed? 0 l3))
+        (format #t "player triggered reset combo~%")
+        (speedrun-practice-spawn)
+        )
+      
+      ;; Check for temp checkpoint combo
+      (when (cpad-pressed? 0 down)
+        (format #t "player triggered temp checkpoint combo~%")
+        (speedrun-practice-store-temp-checkpoint)
+        )
+      
+      ;; Check for flutflut
+      (when (cpad-pressed? 0 left)
+        (format #t "player triggered flutflut combo~%")
+        (get-on-flutflut)
+        )
+      
+      ;; Check for zoomer
+      (when (cpad-pressed? 0 right)
+        (format #t "player triggered zoomer combo~%")
+        (get-on-zoomer)
+        )
       )
     )
-  (none))
+  (none)
+  )
 
 (defun speedrun-reset-common-settings ()
   ;; disable hints (this seems to be overriden by your slot 1 save though)
@@ -98,12 +115,58 @@
   )
 
 (defun get-on-flutflut ()
-  (send-event *target* 'change-mode 'flut #f)
+  (case (-> *target* state)
+    ((target-flut-stance target-racing)
+      (send-event *target* 'end-mode)
+      )
+    (else
+      (send-event *target* 'change-mode 'flut #f)
+      )
+    )
   (none)
   )
 
-(defun speedrun-practice-last-checkpoint ()
-  (initialize! *game-info* 'die (the-as game-save #f) (the-as string #f))
+(defun get-on-zoomer ()
+  (case (-> *target* state)
+    ((target-flut-stance target-racing)
+      (send-event *target* 'end-mode)
+      )
+    (else
+      (send-event *target* 'change-mode 'racing #f)
+      )
+    )
+  (none)
+  )
+
+(define *tmp-continue-point* (new 'static 'continue-point
+                             :name "tmp"
+                             :level #f
+                             :trans (new 'static 'vector :w 1.0)
+                             :quat (new 'static 'quaternion :w 1.0)
+                             :camera-trans (new 'static 'vector :w 1.0)
+                             :camera-rot (new 'static 'array float 9)
+                             :load-commands '()
+                             :vis-nick #f
+                             :lev0 #f
+                             :disp0 #f
+                             :lev1 #f
+                             :disp1 #f
+                             )
+    )
+(define *tmp-flut?* #f)
+(define *tmp-zoomer?* #f)
+
+(defun speedrun-practice-temp-checkpoint ()
+  (cond
+    (*tmp-flut?* (set! *practice-spawn-post-init* get-on-flutflut))
+    (*tmp-zoomer?* (set! *practice-spawn-post-init* get-on-zoomer))
+    )
+  (if (cpad-pressed? 0 l3)  ;; fully reset game if L3 used instead of dpad up
+    (initialize! *game-info* 'game (the-as game-save #f) (the-as string #f))
+    )
+  (set! (-> *game-info* current-continue) *tmp-continue-point*)
+  (initialize! *game-info* 'dead (the-as game-save #f) (the-as string #f))
+  (speedrun-reset-common-settings)
   (none)
   )
 
@@ -180,8 +243,63 @@
   (none)
   )
 
+(defun continue-point-copy! ((dst continue-point) (src continue-point))
+  (set! (-> dst level) (-> src level))
+  (set! (-> dst quat y) 0.0)
+  (set! (-> dst quat w) 1.0)
+  (set! (-> dst load-commands) (-> src load-commands))
+  (set! (-> dst vis-nick) (-> src vis-nick))
+  (when (-> *level* level0)
+    (set! (-> dst lev0) (-> *level* level0 name))
+    (set! (-> dst disp0) (-> *level* level0 name))
+    )
+  (when (-> *level* level1)
+    (set! (-> dst lev1) (-> *level* level1 name))
+    (set! (-> dst disp1)  (-> *level* level0 name))
+    )
+  (none)
+  )
 
+(defun camera-rot-copy! ((dst continue-point) (src matrix))
+  (set! (-> dst camera-rot 0) (-> src vector 0 x))
+  (set! (-> dst camera-rot 1) (-> src vector 0 y))
+  (set! (-> dst camera-rot 2) (-> src vector 0 z))
+  (set! (-> dst camera-rot 3) (-> src vector 1 x))
+  (set! (-> dst camera-rot 4) (-> src vector 1 y))
+  (set! (-> dst camera-rot 5) (-> src vector 1 z))
+  (set! (-> dst camera-rot 6) (-> src vector 2 x))
+  (set! (-> dst camera-rot 7) (-> src vector 2 y))
+  (set! (-> dst camera-rot 8) (-> src vector 2 z))
+  (none)
+  )
 
+(defun speedrun-practice-store-temp-checkpoint ()
+  (case (-> *target* state)
+    ;; only store temp checkpoint if in one of these states
+    ((target-stance target-flut-stance target-racing)
+      (set! *last-speedrun-practice-option* (speedrun-practice-option none))
+      
+      ;; assume current continue is good enough for the current location
+      (continue-point-copy! *tmp-continue-point* (-> *game-info* current-continue))
+      (vector-copy! (-> *tmp-continue-point* trans) (-> *target* root trans))
+      (vector-copy! (-> *tmp-continue-point* camera-trans) (-> *camera-combiner* trans))
+      (camera-rot-copy! *tmp-continue-point* (-> *math-camera* inv-camera-rot))
+
+      (set! *tmp-flut?* #f)
+      (set! *tmp-zoomer?* #f)
+      (case (-> *target* state)
+        ((target-flut-stance)
+          (set! *tmp-flut?* #t)
+          )
+        ((target-racing)
+          (set! *tmp-zoomer?* #t)
+          )
+        )
+      (sound-play "select-menu")
+      )
+    )
+  (none)
+  )
 
 (defun speedrun-practice-spawn ()
   ;; enable speedrunner mode
@@ -223,8 +341,8 @@
     (((speedrun-practice-option gondola-foot))
       (speedrun-practice-gondola-foot-start-run)
       )
-    (else ;; not possible for *last-speedrun-practice-option* to be none yet
-      (speedrun-practice-last-checkpoint)
+    (else
+      (speedrun-practice-temp-checkpoint)
       )
     )
   
