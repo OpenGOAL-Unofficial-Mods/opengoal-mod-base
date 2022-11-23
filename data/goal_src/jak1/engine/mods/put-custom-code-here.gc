@@ -35,6 +35,7 @@
 
     (defun runs-on-cell-pickup ()
     ;;Code here runs on cell pickup
+     (increase-power-cell-by-one)
 
     (none)
     )

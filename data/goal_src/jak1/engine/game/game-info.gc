@@ -613,7 +613,7 @@
      (adjust (-> (the-as target (-> obj process)) game) 'money amount source-handle)
      )
     (((pickup-type fuel-cell))
-     (runs-on-cell-pickup) ;; triger hook for mod base
+   
      ;; the amount is actually the index of the task.
      (let ((s4-2 (the int amount)))
        (if (not (or (task-complete? (-> (the-as target (-> obj process)) game) (the-as game-task s4-2))
@@ -622,8 +622,10 @@
                 )
            (set! (-> obj fuel-cell-pickup-time) (-> *display* base-frame-counter))
            )
+             (if (>= (-> *game-info* fuel )1.0) (runs-on-cell-pickup)) ;; triger hook for mod base
        )
      (adjust (-> (the-as target (-> obj process)) game) 'fuel-cell amount source-handle)
+    
      )
     (((pickup-type buzzer))
      ;; buzzer

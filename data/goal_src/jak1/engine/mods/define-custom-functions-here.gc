@@ -45,6 +45,25 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 (define *currentHintName* "")
 (define *currentCutsceneFrame* 0)
 
+#|
+1. List of checkpoints that we can teleport to DONE
+2. A function that returns a random checkpoint from the list DONE
+3. Find the code that teleports Jak to a specifed checkpoint
+4. Add this code into a function that is triggered when you grab cell, but modify it to use the function that returns a random checkpoint.
+|#
+
+(define listOfCheckpoints (new 'static 'boxed-array :type string :length 5
+   "beach-start"
+   "game-start"
+   "sunken-start"
+   "firecanyon-start"
+   "swamp-start"
+            ))
+
+  (defun getRandomCheckpointFromList()
+  (-> listOfCheckpoints (rand-vu-int-range 0 4))
+  )
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Functions to call in mods
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
