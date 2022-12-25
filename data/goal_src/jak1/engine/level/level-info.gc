@@ -2415,9 +2415,9 @@
 
 (define block-man (new 'static 'level-load-info
                            :index 22
-                           :name 'block-world
-                           :visname 'block-world-vis ;; name + -vis
-                           :nickname 'bwd          ;; nickname
+                           :name 'block-man
+                           :visname 'block-man-vis ;; name + -vis
+                           :nickname 'man          ;; nickname
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2428,7 +2428,7 @@
                            :sky #t
                            :continues '((new 'static 'continue-point
                                              :name "block-man-start"
-                                             :level 'block-world
+                                             :level 'block-man
                                              ;;:flags (continue-flags warp)
                                              :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
                                              :quat (new 'static 'quaternion  :w 1.0)
@@ -2436,7 +2436,7 @@
                                              :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
                                              :load-commands '()
                                              :vis-nick 'none
-                                             :lev0 'block-world
+                                             :lev0 'block-man
                                              :disp0 'display
                                              :lev1 'village1
                                              :disp1 'display
@@ -2495,9 +2495,9 @@
 
 (define chemical-factory (new 'static 'level-load-info
                            :index 22
-                           :name 'block-world
-                           :visname 'block-world-vis ;; name + -vis
-                           :nickname 'bwd          ;; nickname
+                           :name 'chemical-factory
+                           :visname 'chemical-factory-vis ;; name + -vis
+                           :nickname 'che          ;; nickname
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2508,7 +2508,7 @@
                            :sky #t
                            :continues '((new 'static 'continue-point
                                              :name "chemical-factory-start"
-                                             :level 'block-world
+                                             :level 'chemical-factory
                                              ;;:flags (continue-flags warp)
                                              :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
                                              :quat (new 'static 'quaternion  :w 1.0)
@@ -2516,7 +2516,7 @@
                                              :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
                                              :load-commands '()
                                              :vis-nick 'none
-                                             :lev0 'block-world
+                                             :lev0 'chemical-factory
                                              :disp0 'display
                                              :lev1 'village1
                                              :disp1 'display
