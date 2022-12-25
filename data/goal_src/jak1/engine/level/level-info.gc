@@ -2215,9 +2215,9 @@
 
 (define space-bridge (new 'static 'level-load-info
                            :index 22
-                           :name 'block-world
-                           :visname 'block-world-vis ;; name + -vis
-                           :nickname 'bwd          ;; nickname
+                           :name 'space-bridge
+                           :visname 'space-bridge-vis ;; name + -vis
+                           :nickname 'spa          ;; nickname
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2228,7 +2228,7 @@
                            :sky #t
                            :continues '((new 'static 'continue-point
                                              :name "space-bridge-start"
-                                             :level 'block-world
+                                             :level 'space-bridge
                                              ;;:flags (continue-flags warp)
                                              :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
                                              :quat (new 'static 'quaternion  :w 1.0)
@@ -2236,7 +2236,7 @@
                                              :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
                                              :load-commands '()
                                              :vis-nick 'none
-                                             :lev0 'block-world
+                                             :lev0 'space-bridge
                                              :disp0 'display
                                              :lev1 'village1
                                              :disp1 'display
@@ -2575,9 +2575,9 @@
 
 (define villa-cube (new 'static 'level-load-info
                            :index 22
-                           :name 'block-world
-                           :visname 'block-world-vis ;; name + -vis
-                           :nickname 'bwd          ;; nickname
+                           :name 'villa-cube
+                           :visname 'villa-cube-vis ;; name + -vis
+                           :nickname 'vil         ;; nickname
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2588,7 +2588,7 @@
                            :sky #t
                            :continues '((new 'static 'continue-point
                                              :name "villa-cube-start"
-                                             :level 'block-world
+                                             :level 'villa-cube
                                              ;;:flags (continue-flags warp)
                                              :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
                                              :quat (new 'static 'quaternion  :w 1.0)
@@ -2596,7 +2596,7 @@
                                              :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
                                              :load-commands '()
                                              :vis-nick 'none
-                                             :lev0 'block-world
+                                             :lev0 'villa-cube
                                              :disp0 'display
                                              :lev1 'village1
                                              :disp1 'display
