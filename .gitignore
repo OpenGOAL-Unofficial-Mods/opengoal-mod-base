@@ -18,3 +18,8 @@ data/extractor.log
 .env
 Zedbottwitchintegration.exe
 *.lnk
+*.PPF
+*.TPF
+*.DAT
+*.STG
+*.TIM
