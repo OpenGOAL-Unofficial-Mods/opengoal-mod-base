@@ -2735,9 +2735,9 @@
 
 (define chicks (new 'static 'level-load-info
                            :index 22
-                           :name 'block-world
-                           :visname 'block-world-vis ;; name + -vis
-                           :nickname 'bwd          ;; nickname
+                           :name 'chicks
+                           :visname 'chicks-vis ;; name + -vis
+                           :nickname 'chi          ;; nickname
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2748,7 +2748,7 @@
                            :sky #t
                            :continues '((new 'static 'continue-point
                                              :name "chicks-start"
-                                             :level 'block-world
+                                             :level 'chicks
                                              ;;:flags (continue-flags warp)
                                              :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
                                              :quat (new 'static 'quaternion  :w 1.0)
@@ -2756,7 +2756,7 @@
                                              :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
                                              :load-commands '()
                                              :vis-nick 'none
-                                             :lev0 'block-world
+                                             :lev0 'chicks
                                              :disp0 'display
                                              :lev1 'village1
                                              :disp1 'display
