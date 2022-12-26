@@ -736,6 +736,32 @@
     )
   )
 
+#|
+This is a method taken from Jak 2 that takes in a string and uppercases it, we need to use this to uppercase our input
+Before trying to display it on screen.
+|#
+(defun string-upcase ((arg0 string) (arg1 string))
+  "Uppercase the given string."
+  (let* ((a0-1 (-> arg0 data))
+         (a3-0 (-> a0-1 0))
+         (a2-0 1)
+         (v1-0 0)
+         )
+    (while (nonzero? a3-0)
+      (if (and (>= a3-0 (the-as uint 97)) (>= (the-as uint 122) a3-0))
+          (+! a3-0 -32)
+          )
+      (set! (-> arg1 data v1-0) a3-0)
+      (set! a3-0 (-> a0-1 a2-0))
+      (+! a2-0 1)
+      (+! v1-0 1)
+      )
+    (set! (-> arg1 data v1-0) (the-as uint 0))
+    )
+  0
+  (none)
+  )
+  
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Globals
 ;;;;;;;;;;;;;;;;;;;;;

@@ -2018,6 +2018,7 @@
                            :name 'block-world
                            :visname 'block-world-vis ;; name + -vis
                            :nickname 'bwd          ;; nickname
+                           :customname "Welcome to Block World!"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2058,6 +2059,7 @@
                            :name 'islands
                            :visname 'islands-vis ;; name + -vis
                            :nickname 'isl          ;; nickname
+                           :customname "Islands"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2098,6 +2100,7 @@
                            :name 'monument
                            :visname 'monument-vis ;; name + -vis
                            :nickname 'mon         ;; nickname
+                           :customname "monument"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2138,6 +2141,7 @@
                            :name 'pyramid
                            :visname 'pyramid-vis ;; name + -vis
                            :nickname 'pyr       ;; nickname
+                           :customname "pyramid"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2178,6 +2182,7 @@
                            :name 'garden
                            :visname 'garden-vis ;; name + -vis
                            :nickname 'gar          ;; nickname
+                           :customname "garden"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2218,6 +2223,7 @@
                            :name 'space-bridge
                            :visname 'space-bridge-vis ;; name + -vis
                            :nickname 'spa          ;; nickname
+                           :customname "Space Bridge"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2258,6 +2264,7 @@
                            :name 'holly-wood
                            :visname 'holly-wood-vis ;; name + -vis
                            :nickname 'hol          ;; nickname
+                           :customname "Holly Wood"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2298,6 +2305,7 @@
                            :name 'ice-canyon
                            :visname 'ice-canyon-vis ;; name + -vis
                            :nickname 'can          ;; nickname
+                           :customname "Ice Canyon"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2338,6 +2346,7 @@
                            :name 'cathederal
                            :visname 'cathederal-vis ;; name + -vis
                            :nickname 'cat          ;; nickname
+                           :customname "Cathederal"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2378,6 +2387,7 @@
                            :name 'ice-slide
                            :visname 'ice-slide-vis ;; name + -vis
                            :nickname 'sli          ;; nickname
+                           :customname "ice Slide"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2418,6 +2428,7 @@
                            :name 'block-man
                            :visname 'block-man-vis ;; name + -vis
                            :nickname 'man          ;; nickname
+                           :customname "Block Man"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2458,6 +2469,7 @@
                            :name 'cold-pipe
                            :visname 'cold-pipe-vis ;; name + -vis
                            :nickname 'COL          ;; nickname
+                           :customname "Cold pipe"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2498,6 +2510,7 @@
                            :name 'chemical-factory
                            :visname 'chemical-factory-vis ;; name + -vis
                            :nickname 'che          ;; nickname
+                           :customname "Chemical factory"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2538,6 +2551,7 @@
                            :name 'glass-towers
                            :visname 'glass-towers-vis ;; name + -vis
                            :nickname 'gla          ;; nickname
+                           :customname "Glass towers"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2578,6 +2592,7 @@
                            :name 'villa-cube
                            :visname 'villa-cube-vis ;; name + -vis
                            :nickname 'vil         ;; nickname
+                           :customname "Villa cube"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2618,6 +2633,7 @@
                            :name 'cube-face
                            :visname 'cube-face-vis ;; name + -vis
                            :nickname 'FAC          ;; nickname
+                           :customname "Cube Face"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2658,6 +2674,7 @@
                            :name 'factory-cross
                            :visname 'factory-cross-vis ;; name + -vis
                            :nickname 'cro          ;; nickname
+                           :customname "Factory Cross"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2698,6 +2715,7 @@
                            :name 'coins
                            :visname 'coins-vis ;; name + -vis
                            :nickname 'coi          ;; nickname
+                           :customname "Coins"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
@@ -2738,6 +2756,7 @@
                            :name 'chicks
                            :visname 'chicks-vis ;; name + -vis
                            :nickname 'chi          ;; nickname
+                           :customname "Chicks"
                            :packages '()
                            :sound-banks '()
                            :music-bank #f
