@@ -1635,109 +1635,109 @@
 ;; the DGO file
 (custom-level-cgo "BWD.DGO" "block-world/block-world.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "islands")
 ;; the DGO file
 (custom-level-cgo "ISL.DGO" "islands/islands.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "monument")
 ;; the DGO file
 (custom-level-cgo "MON.DGO" "monument/monument.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "pyramid")
 ;; the DGO file
 (custom-level-cgo "PYR.DGO" "pyramid/pyramid.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "garden")
 ;; the DGO file
 (custom-level-cgo "GAR.DGO" "garden/garden.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "space-bridge")
 ;; the DGO file
 (custom-level-cgo "SPA.DGO" "space-bridge/space-bridge.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "holly-wood")
 ;; the DGO file
 (custom-level-cgo "HOL.DGO" "holly-wood/holly-wood.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "ice-canyon")
 ;; the DGO file
 (custom-level-cgo "CAN.DGO" "ice-canyon/ice-canyon.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "cathederal")
 ;; the DGO file
 (custom-level-cgo "CAT.DGO" "cathederal/cathederal.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "ice-slide")
 ;; the DGO file
 (custom-level-cgo "SLI.DGO" "ice-slide/ice-slide.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "block-man")
 ;; the DGO file
 (custom-level-cgo "MAN.DGO" "block-man/block-man.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "cold-pipe")
 ;; the DGO file
 (custom-level-cgo "COL.DGO" "cold-pipe/cold-pipe.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "chemical-factory")
 ;; the DGO file
 (custom-level-cgo "CHE.DGO" "chemical-factory/chemical-factory.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "glass-towers")
 ;; the DGO file
 (custom-level-cgo "GLA.DGO" "glass-towers/glass-towers.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "villa-cube")
 ;; the DGO file
 (custom-level-cgo "VIL.DGO" "villa-cube/villa-cube.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "cube-face")
 ;; the DGO file
 (custom-level-cgo "FAC.DGO" "cube-face/cube-face.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "factory-cross")
 ;; the DGO file
 (custom-level-cgo "CRO.DGO" "factory-cross/factory-cross.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "coins")
 ;; the DGO file
 (custom-level-cgo "COI.DGO" "coins/coins.gd")
 
-;; TAGMORT
+
 ;; it should point to the .jsonc file that specifies the level.
 (build-custom-level "chicks")
 ;; the DGO file

@@ -2815,7 +2815,7 @@
 (cons! *level-load-list* 'factory-cross)
 (cons! *level-load-list* 'block-world)
 
-       #|"block-world-start"
+                                             #|"block-world-start"
                                              "factory-cross-start"
                                              "holly-world-start"
                                              "monument-start"
@@ -2835,3 +2835,5 @@
                                              "block-man-start"
                                              "cube-face-start"
                                              |#
+
+  
