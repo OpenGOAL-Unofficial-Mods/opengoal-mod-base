@@ -586,14 +586,15 @@
   (let ((v1-2 (-> obj entity extra perm task)))
     (cond
       ((logtest? (-> *target* control root-prim prim-core action) (collide-action ca-7 ca-8 ca-9 ca-12 ca-13 ca-14))
-       #f
+       #t;; change from #f
        )
       ((= v1-2 (game-task training-door))
        (cond
-         ((and (task-complete? *game-info* (game-task training-door))
+         ((and #|(task-complete? *game-info* (game-task training-door))
                (task-complete? *game-info* (game-task training-gimmie))
                (task-complete? *game-info* (game-task training-climb))
-               (task-complete? *game-info* (game-task training-buzzer))
+               (task-complete? *game-info* (game-task training-buzzer))|#
+               #t
                )
           #t
           )
@@ -605,7 +606,7 @@
              *entity-pool*
              (game-task none)
              )
-           #f
+             #f
            )
          )
        )

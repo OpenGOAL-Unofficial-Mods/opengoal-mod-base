@@ -65,6 +65,30 @@
       }
     },// star
 
+
+    {
+      "trans": [122.0000, 313.0000, 122.9000],
+      "etype": "eco-yellow",  
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// star
+
+
+    {
+      "trans": [92.5999, 315.0000, 122.9000],
+      "etype": "eco-yellow",  
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// star
+
     {
       "trans": [ 86.2, 312.0, 154.5], 
       "etype": "money", 
@@ -254,6 +278,83 @@
 
     {
       "trans":  [52.2000, 312.0000, 122.9000],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans":  [112.1999, 312.0000, 122.9000],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans":  [133.8000, 312.0000, 122.9000],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans":  [86.3000, 311.0000, 122.9000],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans":  [89.4000, 313.0000, 122.9000],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans":  [95.6999, 313.0000, 122.9000],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans": [98.8000, 311.0000, 122.9000],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans": [40.0999, 309.5000, 130.8000],
       "etype": "money",  
       "game_task": 0,
       "quat" : [0, 0, 0, 1], 
