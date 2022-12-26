@@ -23,7 +23,18 @@
     
     {
       "trans": [86.1999, 314.0000, 154.5000], 
-      "etype": "money",  
+      "etype": "eco-green",  
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// star
+
+    {
+      "trans": [79.0000, 317.0000, 180.5000], 
+      "etype": "eco-green",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -53,6 +64,75 @@
         "name":"test-fuel-cell"
       }
     },// coin
+
+    {
+      "trans": [ 69.4000, 312.6000, 180.5000], 
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans": [ 72.5000, 314.5000, 180.5000], 
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans": [ 75.3000, 316.3999, 180.5000], 
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans": [ 82.3000, 316.3999, 180.5000], 
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans": [ 85.0, 314.5, 180.5], 
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans": [  88.0000, 312.6000, 180.5000], 
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+
+
     {
       "trans": [60.0000, 300.0000, 160.3999], 
       "etype": "eco-blue", 
