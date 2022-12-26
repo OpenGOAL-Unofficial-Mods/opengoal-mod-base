@@ -23,7 +23,7 @@
     
     {
       "trans": [86.1999, 314.0000, 154.5000], 
-      "etype": "eco-green",  
+      "etype": "eco-yellow",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -34,7 +34,29 @@
 
     {
       "trans": [79.0000, 317.0000, 180.5000], 
-      "etype": "eco-green",  
+      "etype": "eco-yellow",  
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// star
+
+    {
+      "trans":  [115.3000, 309.5000, 170.5000],
+      "etype": "eco-yellow",  
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// star
+
+    {
+      "trans": [63.0000, 313.0000, 122.9000],
+      "etype": "eco-yellow",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -131,11 +153,121 @@
       }
     },// coin
 
+    {
+      "trans": [ 131.8999, 303.0000, 190.3999], 
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans": [137.0000, 303.0000, 166.8999], 
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans": [137.0000, 303.0000, 175.0000], 
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans":[125.9000, 312.5000, 176.1000],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans":[121.8000, 311.5000, 173.6999],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans":  [85.3000, 309.5000, 135.8999],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans": [118.6999, 310.5000, 171.6999],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans":  [100.3000, 309.5000, 135.8999],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans": [73.8000, 312.0000, 122.9000],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
+    {
+      "trans":  [52.2000, 312.0000, 122.9000],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+
 
 
     {
       "trans": [60.0000, 300.0000, 160.3999], 
-      "etype": "eco-blue", 
+      "etype": "fuel-cell", 
       "game_task": 0, 
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -148,7 +280,7 @@
 
     {
       "trans": [ 85.4000, 305.0000, 150.6000],
-      "etype": "eco-blue", 
+      "etype": "fuel-cell", 
       "game_task": 0, 
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -159,7 +291,7 @@
 
     {
       "trans": [ 94.0000, 305.0000, 166.6999 ], 
-      "etype": "eco-blue",  
+      "etype": "fuel-cell",  
       "game_task": 0,
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -170,7 +302,7 @@
 
     {
       "trans": [110.8000, 312.5000, 155.0000 ], 
-      "etype": "eco-blue",  
+      "etype": "fuel-cell",  
       "game_task": 0,
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -181,7 +313,7 @@
 
     {
       "trans": [ 97.4000, 300.0000, 195.3000 ], 
-      "etype": "eco-blue",  
+      "etype": "fuel-cell",  
       "game_task": 0,
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -191,7 +323,7 @@
     },// chick
     {
       "trans": [ 130.3999, 310.0000, 179.1999 ], 
-      "etype": "eco-blue",  
+      "etype": "fuel-cell",  
       "game_task": 0,
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 

@@ -22,7 +22,7 @@
 (set! (-> vectortest z) (meters z))
 (birth-pickup-at-point 
 vectortest
-(pickup-type money) 1.0 
+(pickup-type eco-pill) 1.0 
 #f *target* (the-as fact-info #f))
 (format #t "Place Chick here [~f, ~f, ~f], ~%" x y z)
 ;;[37.0000, 300.0000, 112.9000], 
