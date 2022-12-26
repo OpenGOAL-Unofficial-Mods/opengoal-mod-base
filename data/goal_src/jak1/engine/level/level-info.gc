@@ -2013,6 +2013,7 @@
         )
 
 ;; TAGMORT
+
 (define block-world (new 'static 'level-load-info
                            :index 22
                            :name 'block-world
@@ -2054,623 +2055,8 @@
                            )
         )
 
-(define islands (new 'static 'level-load-info
-                           :index 22
-                           :name 'islands
-                           :visname 'islands-vis ;; name + -vis
-                           :nickname 'isl          ;; nickname
-                           :customname "Islands"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "islands-start"
-                                             :level 'islands
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'islands
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define monument (new 'static 'level-load-info
-                           :index 22
-                           :name 'monument
-                           :visname 'monument-vis ;; name + -vis
-                           :nickname 'mon         ;; nickname
-                           :customname "monument"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "monument-start"
-                                             :level 'monument
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'monument
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define pyramid (new 'static 'level-load-info
-                           :index 22
-                           :name 'pyramid
-                           :visname 'pyramid-vis ;; name + -vis
-                           :nickname 'pyr       ;; nickname
-                           :customname "pyramid"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "pyramid-start"
-                                             :level 'pyramid
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'pyramid
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define garden (new 'static 'level-load-info
-                           :index 22
-                           :name 'garden
-                           :visname 'garden-vis ;; name + -vis
-                           :nickname 'gar          ;; nickname
-                           :customname "garden"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "garden-start"
-                                             :level 'garden
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'garden
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define space-bridge (new 'static 'level-load-info
-                           :index 22
-                           :name 'space-bridge
-                           :visname 'space-bridge-vis ;; name + -vis
-                           :nickname 'spa          ;; nickname
-                           :customname "Space Bridge"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "space-bridge-start"
-                                             :level 'space-bridge
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'space-bridge
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define holly-wood (new 'static 'level-load-info
-                           :index 22
-                           :name 'holly-wood
-                           :visname 'holly-wood-vis ;; name + -vis
-                           :nickname 'hol          ;; nickname
-                           :customname "Holly Wood"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "holly-world-start"
-                                             :level 'holly-wood
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'holly-wood
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define ice-canyon (new 'static 'level-load-info
-                           :index 22
-                           :name 'ice-canyon
-                           :visname 'ice-canyon-vis ;; name + -vis
-                           :nickname 'can          ;; nickname
-                           :customname "Ice Canyon"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "ice-canyon-start"
-                                             :level 'ice-canyon
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'ice-canyon
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define cathederal (new 'static 'level-load-info
-                           :index 22
-                           :name 'cathederal
-                           :visname 'cathederal-vis ;; name + -vis
-                           :nickname 'cat          ;; nickname
-                           :customname "Cathederal"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "cathederal-start"
-                                             :level 'cathederal
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'cathederal
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define ice-slide (new 'static 'level-load-info
-                           :index 22
-                           :name 'ice-slide
-                           :visname 'ice-slide-vis ;; name + -vis
-                           :nickname 'sli          ;; nickname
-                           :customname "ice Slide"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "ice-slide-start"
-                                             :level 'ice-slide
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'ice-slide
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define block-man (new 'static 'level-load-info
-                           :index 22
-                           :name 'block-man
-                           :visname 'block-man-vis ;; name + -vis
-                           :nickname 'man          ;; nickname
-                           :customname "Block Man"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "block-man-start"
-                                             :level 'block-man
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'block-man
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define cold-pipe (new 'static 'level-load-info
-                           :index 22
-                           :name 'cold-pipe
-                           :visname 'cold-pipe-vis ;; name + -vis
-                           :nickname 'COL          ;; nickname
-                           :customname "Cold pipe"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "cold-pipe-start"
-                                             :level 'cold-pipe
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'cold-pipe
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define chemical-factory (new 'static 'level-load-info
-                           :index 22
-                           :name 'chemical-factory
-                           :visname 'chemical-factory-vis ;; name + -vis
-                           :nickname 'che          ;; nickname
-                           :customname "Chemical factory"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "chemical-factory-start"
-                                             :level 'chemical-factory
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'chemical-factory
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define glass-towers (new 'static 'level-load-info
-                           :index 22
-                           :name 'glass-towers
-                           :visname 'glass-towers-vis ;; name + -vis
-                           :nickname 'gla          ;; nickname
-                           :customname "Glass towers"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "glass-towers-start"
-                                             :level 'glass-towers
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'glass-towers
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define villa-cube (new 'static 'level-load-info
-                           :index 22
-                           :name 'villa-cube
-                           :visname 'villa-cube-vis ;; name + -vis
-                           :nickname 'vil         ;; nickname
-                           :customname "Villa cube"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "villa-cube-start"
-                                             :level 'villa-cube
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'villa-cube
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
-(define cube-face (new 'static 'level-load-info
-                           :index 22
-                           :name 'cube-face
-                           :visname 'cube-face-vis ;; name + -vis
-                           :nickname 'FAC          ;; nickname
-                           :customname "Cube Face"
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
-                           :ambient-sounds '()
-                           :mood '*default-mood*
-                           :mood-func 'update-mood-default
-                           :ocean #f
-                           :sky #t
-                           :continues '((new 'static 'continue-point
-                                             :name "cube-face-start"
-                                             :level 'cube-face
-                                             ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
-                                             :load-commands '()
-                                             :vis-nick 'none
-                                             :lev0 'cube-face
-                                             :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
-                                             ))
-                           :tasks '()
-                           :priority 100
-                           :load-commands '()
-                           :alt-load-commands '()
-                           :bsp-mask #xffffffffffffffff
-                           :bsphere (new 'static 'sphere :w 167772160000.0)
-                           :bottom-height (meters -20)
-                           :run-packages '()
-                           :wait-for-load #t
-                           )
-        )
-
 (define factory-cross (new 'static 'level-load-info
-                           :index 22
+                           :index 23
                            :name 'factory-cross
                            :visname 'factory-cross-vis ;; name + -vis
                            :nickname 'cro          ;; nickname
@@ -2710,8 +2096,213 @@
                            )
         )
 
+(define holly-wood (new 'static 'level-load-info
+                           :index 24
+                           :name 'holly-wood
+                           :visname 'holly-wood-vis ;; name + -vis
+                           :nickname 'hol          ;; nickname
+                           :customname "Holly Wood"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "holly-world-start"
+                                             :level 'holly-wood
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'holly-wood
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+
+(define monument (new 'static 'level-load-info
+                           :index 25
+                           :name 'monument
+                           :visname 'monument-vis ;; name + -vis
+                           :nickname 'mon         ;; nickname
+                           :customname "monument"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "monument-start"
+                                             :level 'monument
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'monument
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+
+(define cathederal (new 'static 'level-load-info
+                           :index 26
+                           :name 'cathederal
+                           :visname 'cathederal-vis ;; name + -vis
+                           :nickname 'cat          ;; nickname
+                           :customname "Cathederal"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "cathederal-start"
+                                             :level 'cathederal
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'cathederal
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+
+(define pyramid (new 'static 'level-load-info
+                           :index 27
+                           :name 'pyramid
+                           :visname 'pyramid-vis ;; name + -vis
+                           :nickname 'pyr       ;; nickname
+                           :customname "pyramid"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "pyramid-start"
+                                             :level 'pyramid
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'pyramid
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+
+(define ice-canyon (new 'static 'level-load-info
+                           :index 28
+                           :name 'ice-canyon
+                           :visname 'ice-canyon-vis ;; name + -vis
+                           :nickname 'can          ;; nickname
+                           :customname "Ice Canyon"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "ice-canyon-start"
+                                             :level 'ice-canyon
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'ice-canyon
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+
 (define coins (new 'static 'level-load-info
-                           :index 22
+                           :index 29
                            :name 'coins
                            :visname 'coins-vis ;; name + -vis
                            :nickname 'coi          ;; nickname
@@ -2751,8 +2342,254 @@
                            )
         )
 
+(define villa-cube (new 'static 'level-load-info
+                           :index 30
+                           :name 'villa-cube
+                           :visname 'villa-cube-vis ;; name + -vis
+                           :nickname 'vil         ;; nickname
+                           :customname "Villa cube"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "villa-cube-start"
+                                             :level 'villa-cube
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'villa-cube
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+
+(define ice-slide (new 'static 'level-load-info
+                           :index 31
+                           :name 'ice-slide
+                           :visname 'ice-slide-vis ;; name + -vis
+                           :nickname 'sli          ;; nickname
+                           :customname "ice Slide"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "ice-slide-start"
+                                             :level 'ice-slide
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'ice-slide
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+  
+(define islands (new 'static 'level-load-info
+                           :index 32
+                           :name 'islands
+                           :visname 'islands-vis ;; name + -vis
+                           :nickname 'isl          ;; nickname
+                           :customname "Islands"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "islands-start"
+                                             :level 'islands
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'islands
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+
+(define glass-towers (new 'static 'level-load-info
+                           :index 33
+                           :name 'glass-towers
+                           :visname 'glass-towers-vis ;; name + -vis
+                           :nickname 'gla          ;; nickname
+                           :customname "Glass towers"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "glass-towers-start"
+                                             :level 'glass-towers
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'glass-towers
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+
+(define chemical-factory (new 'static 'level-load-info
+                           :index 34
+                           :name 'chemical-factory
+                           :visname 'chemical-factory-vis ;; name + -vis
+                           :nickname 'che          ;; nickname
+                           :customname "Chemical factory"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "chemical-factory-start"
+                                             :level 'chemical-factory
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'chemical-factory
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+      
+(define space-bridge (new 'static 'level-load-info
+                           :index 35
+                           :name 'space-bridge
+                           :visname 'space-bridge-vis ;; name + -vis
+                           :nickname 'spa          ;; nickname
+                           :customname "Space Bridge"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "space-bridge-start"
+                                             :level 'space-bridge
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'space-bridge
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+
 (define chicks (new 'static 'level-load-info
-                           :index 22
+                           :index 36
                            :name 'chicks
                            :visname 'chicks-vis ;; name + -vis
                            :nickname 'chi          ;; nickname
@@ -2792,25 +2629,209 @@
                            )
         )
 
+(define garden (new 'static 'level-load-info
+                           :index 37
+                           :name 'garden
+                           :visname 'garden-vis ;; name + -vis
+                           :nickname 'gar          ;; nickname
+                           :customname "garden"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "garden-start"
+                                             :level 'garden
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'garden
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+
+(define cold-pipe (new 'static 'level-load-info
+                           :index 38
+                           :name 'cold-pipe
+                           :visname 'cold-pipe-vis ;; name + -vis
+                           :nickname 'COL          ;; nickname
+                           :customname "Cold pipe"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "cold-pipe-start"
+                                             :level 'cold-pipe
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'cold-pipe
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+
+(define block-man (new 'static 'level-load-info
+                           :index 39
+                           :name 'block-man
+                           :visname 'block-man-vis ;; name + -vis
+                           :nickname 'man          ;; nickname
+                           :customname "Block Man"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "block-man-start"
+                                             :level 'block-man
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'block-man
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+      
+(define cube-face (new 'static 'level-load-info
+                           :index 40
+                           :name 'cube-face
+                           :visname 'cube-face-vis ;; name + -vis
+                           :nickname 'FAC          ;; nickname
+                           :customname "Cube Face"
+                           :packages '()
+                           :sound-banks '()
+                           :music-bank #f
+                           :ambient-sounds '()
+                           :mood '*default-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '((new 'static 'continue-point
+                                             :name "cube-face-start"
+                                             :level 'cube-face
+                                             ;;:flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'cube-face
+                                             :disp0 'display
+                                             :lev1 'village1
+                                             :disp1 'display
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters -20)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+
 
 (cons! *level-load-list* 'test-zone)
-(cons! *level-load-list* 'block-world)
-(cons! *level-load-list* 'islands)
-(cons! *level-load-list* 'monument)
-(cons! *level-load-list* 'pyramid)
-(cons! *level-load-list* 'garden)
-(cons! *level-load-list* 'space-bridge)
-(cons! *level-load-list* 'holly-wood)
-(cons! *level-load-list* 'ice-canyon)
-(cons! *level-load-list* 'cathederal)
-(cons! *level-load-list* 'ice-slide)
+(cons! *level-load-list* 'cube-face)
 (cons! *level-load-list* 'block-man)
 (cons! *level-load-list* 'cold-pipe)
+(cons! *level-load-list* 'garden)
+(cons! *level-load-list* 'chicks)
+(cons! *level-load-list* 'space-bridge)
 (cons! *level-load-list* 'chemical-factory)
 (cons! *level-load-list* 'glass-towers)
+(cons! *level-load-list* 'islands)
+(cons! *level-load-list* 'ice-slide)
 (cons! *level-load-list* 'villa-cube)
-(cons! *level-load-list* 'cube-face)
-(cons! *level-load-list* 'factory-cross)
 (cons! *level-load-list* 'coins)
-(cons! *level-load-list* 'chicks)
+(cons! *level-load-list* 'ice-canyon)
+(cons! *level-load-list* 'pyramid)
+(cons! *level-load-list* 'cathederal)
+(cons! *level-load-list* 'monument)
+(cons! *level-load-list* 'holly-wood)
+(cons! *level-load-list* 'factory-cross)
+(cons! *level-load-list* 'block-world)
 
+       #|"block-world-start"
+                                             "factory-cross-start"
+                                             "holly-world-start"
+                                             "monument-start"
+                                             "cathederal-start"
+                                             "pyramid-start"
+                                             "ice-canyon-start"
+                                             "coins-start"
+                                             "villa-cube-start"
+                                             "ice-slide-start"
+                                             "islands-start"
+                                             "glass-towers-start"
+                                             "chemical-factory-start"
+                                             "space-bridge-start"
+                                             "chicks-start"
+                                             "garden-start"
+                                             "cold-pipe-start"
+                                             "block-man-start"
+                                             "cube-face-start"
+                                             |#
