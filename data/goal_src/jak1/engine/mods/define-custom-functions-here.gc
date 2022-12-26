@@ -14,6 +14,19 @@
  the powercell count by one when it is called
  |#
 
+(define vectortest (new 'static 'vector :x 0.0 :y 0.0 :z 0.0))
+(defun testchick ((x float) (y float) (z float))
+;;(defbehavior birth-pickup-at-point process ((arg0 vector) (arg1 pickup-type) (arg2 float) (arg3 symbol) (arg4 process-tree) (arg5 fact-info))
+(set! (-> vectortest x) (meters x))
+(set! (-> vectortest y) (meters y))
+(set! (-> vectortest z) (meters z))
+(birth-pickup-at-point 
+vectortest
+(pickup-type money) 1.0 
+#f *target* (the-as fact-info #f))
+(format #t "Place Chick here ~f ~f ~f ~%" x y z)
+(none)
+)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Useful GOAL modding documentation
