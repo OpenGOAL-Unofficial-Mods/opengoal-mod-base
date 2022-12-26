@@ -24,7 +24,7 @@
 vectortest
 (pickup-type money) 1.0 
 #f *target* (the-as fact-info #f))
-(format #t "Place Chick here ~f ~f ~f ~%" x y z)
+(format #t "Place Chick here ~f, ~f, ~f ~%" x y z)
 (none)
 )
 

@@ -20,36 +20,170 @@
   "double_sided_collide": false,
 
   "actors" : [
+    
     {
-      "trans": [-21.6238, 20.0496, 17.1191], // translation
-      "etype": "fuel-cell",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "trans": [86.1999, 314.0000, 154.5000], 
+      "etype": "money",  
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
         "name":"test-fuel-cell"
       }
-    },
+    },// star
 
     {
-      "trans": [-15.2818, 15.2461, 17.1360], // translation
-      "etype": "crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-15.2818, 15.2461, 17.1360, 10], // bounding sphere
+      "trans": [ 86.2, 312.0, 154.5], 
+      "etype": "money", 
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-crate",
-        "crate-type":"'steel",
-        "eco-info": ["int32", 5, 10]
+        "name":"test-fuel-cell"
       }
-    },
+    },// coin
 
     {
-      "trans": [-5.4630, 17.4553, 1.6169], // translation
-      "etype": "eco-yellow",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-5.4630, 17.4553, 1.6169, 10], // bounding sphere
+      "trans": [ 80.5000, 309.0000, 170.3999 ], 
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// coin
+    {
+      "trans": [60.0000, 300.0000, 160.3999], 
+      "etype": "eco-blue", 
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }//chick
+    },
+
+
+
+    {
+      "trans": [ 85.4000, 305.0000, 150.6000],
+      "etype": "eco-blue", 
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// chick
+
+    {
+      "trans": [ 94.0000, 305.0000, 166.6999 ], 
+      "etype": "eco-blue",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// chick
+
+    {
+      "trans": [110.8000, 312.5000, 155.0000 ], 
+      "etype": "eco-blue",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// chick
+
+    {
+      "trans": [ 97.4000, 300.0000, 195.3000 ], 
+      "etype": "eco-blue",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// chick
+    {
+      "trans": [ 130.3999, 310.0000, 179.1999 ], 
+      "etype": "eco-blue",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// chick
+
+    {
+      "trans": [60.2999, 300.0000, 145.6000], 
+      "etype": "crate", 
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// egg fucking have no clue
+
+    {
+      "trans": [37.0000, 300.0000, 112.9000], 
+      "etype": "crate", 
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// egg fucking have no clue
+
+    {
+      "trans": [ 37.0000, 300.0000, 172.6000], 
+      "etype": "crate", 
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// egg spring
+
+    {
+      "trans": [ 65.4000, 300.0000, 184.0000], 
+      "etype": "crate", 
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// egg magnet
+
+    {
+      "trans": [ 124.8000, 300.0000, 174.8000], 
+      "etype": "crate", 
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },// egg spring
+
+
+
+
+    {
+      "trans": [-5.4630, 17.4553, 1.6169],
+      "etype": "eco-yellow",  
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-5.4630, 17.4553, 1.6169, 10], 
       "lump": {
         "name":"test-eco"
       }
