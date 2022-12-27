@@ -2032,10 +2032,10 @@
                                              :name "block-world-start"
                                              :level 'block-world
                                              ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :trans (new 'static 'vector :x (meters 32.0085) :y (meters 300.1105) :z (meters 153.0149) :w 1.0)
                                              :quat (new 'static 'quaternion  :w 1.0)
                                              :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+                                             :camera-rot (new 'static 'array float 9 -0.0254 0.0000 -0.9996 0.1213 0.9926 -0.0030 0.9922 -0.1213 -0.0252)
                                              :load-commands '()
                                              :vis-nick 'none
                                              :lev0 'block-world
