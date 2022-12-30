@@ -161,17 +161,55 @@
   (-> obj current-continue)
   )
 
+
+
+
 (defmethod get-entity-task-perm game-info ((obj game-info) (arg0 game-task))
   "Get the permanent storage for a game-task"
   (-> obj task-perm-list data arg0)
   )
+  ;;TAGMORT
+(define *game-counts* (the-as game-count-info #f))
 
+;;(lookup-text! *common-text*  (-> *level-task-data* (-> *level-task-data-remap* (+ 22 -1)) level-name-id) #f)
+;; (-> *game-counts* data (-> *level-task-data-remap* (+ 22 -1))money-count)
+
+(defun level-load-info-by-index ()
+  "Find level-load-info by index"
+  (let ((iter *level-load-list*))
+    (while (not (null? iter))
+      (let* ((sym (the symbol (car iter)))
+             (info (the level-load-info (-> sym value))))
+             (if (!= (-> info custom-orb-count)0)
+             (set! (-> *game-counts* data (-> *level-task-data-remap* (+ (-> info index) -1))money-count) (-> info custom-orb-count))
+             )
+             (if (!= (-> info custom-buzzer-count)0)
+             (set! (-> *game-counts* data (-> *level-task-data-remap* (+ (-> info index) -1))buzzer-count) (-> info custom-buzzer-count))
+             )
+            ;;TAGMORT todo if the number is huge make it 0
+           #| (if (< (-> *game-counts* data (-> *level-task-data-remap* (+ (-> info index) -1))money-count) 400)
+            (set! (-> *game-counts* data (-> *level-task-data-remap* (+ (-> info index) -1))money-count) 0)
+        )
+
+            (if (< (-> *game-counts* data (-> *level-task-data-remap* (+ (-> info index) -1))buzzer-count) 400)
+            (set! (-> *game-counts* data (-> *level-task-data-remap* (+ (-> info index) -1))buzzer-count) 0)
+        )|#
+      )
+      (set! iter (cdr iter))
+      )
+    )
+  )
+
+;;TODO make this work 40 times 40 crashes the game for some reason...
 (defmethod initialize! game-info ((obj game-info) (cause symbol) (save-to-load game-save) (continue-point-override string))
   "Initialize the game-info.
     The cause can be 'dead if you die, or 'game to reset everything.
     If save-to-load is not #f will load data from that.
     If continue-point-override is not #f, will use that."
+;;(define *game-counts* (the-as game-count-info #f))
 
+
+ (level-load-info-by-index)
   (local-vars (v0-0 int) (sv-96 symbol))
   (case cause
     (('dead)
@@ -1011,3 +1049,4 @@
 
 
 
+ 

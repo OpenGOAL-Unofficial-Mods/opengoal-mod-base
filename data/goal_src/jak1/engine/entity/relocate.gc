@@ -70,6 +70,8 @@
       (relocate s4-0 arg0)
       (&+! s4-0 (logand -16 (+ (asize-of s4-0) 15)))
       )
+      ;;TAGMORT
+      (set! (-> *game-counts* length) 70)
     )
   (&+! (-> obj main-thread) arg0)
   (&+! (-> obj top-thread) arg0)
