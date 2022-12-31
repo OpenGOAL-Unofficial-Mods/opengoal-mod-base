@@ -1,0 +1,18 @@
+;;-*-Lisp-*-
+(in-package goal)
+
+;; name: .mort-library.gc
+;; name in dgo: .mort-library
+;; dgos: TODO
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Level functions
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;TODO
+;; function that takes in an actor, end point(vector), and time-unit. 
+;;Then starts at an actors trans and translates it to the end point and back during the provided cycle time
+
+(defun move-mort-enemy-to-point ((actor-name string)(end-location vector)(cycle-speed time-unit))
+
+(none))
