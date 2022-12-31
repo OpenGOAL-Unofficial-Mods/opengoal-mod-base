@@ -2020,7 +2020,7 @@
                            :visname 'block-world-vis ;; name + -vis
                            :nickname 'bwd          ;; nickname
                            :customname "Welcome to Block World!"
-                           :custom-orb-count 5
+                           :custom-orb-count 25
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2794,7 +2794,8 @@
                            :visname 'cube-face-vis ;; name + -vis
                            :nickname 'FAC          ;; nickname
                            :customname "Cube Face"
-
+                           :custom-orb-count 5
+                           :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
                            :music-bank #f

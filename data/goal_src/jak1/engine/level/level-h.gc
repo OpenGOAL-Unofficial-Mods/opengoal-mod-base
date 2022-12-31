@@ -126,7 +126,7 @@
    (custom-orb-count int)
    (custom-buzzer-count int)
 
-   (customname string)
+  
    )
   :method-count-assert 9
 
