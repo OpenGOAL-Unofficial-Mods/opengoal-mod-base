@@ -715,7 +715,7 @@
   (garden-level-name            #x1516)
   (cold-pipe-level-name            #x1517)
   (block-man-level-name            #x1518)
-  (cube-face-level-name            #x1519)
+  (cube-face -level-name            #x1519)
   (default                      #x10d0)
   (flava-vi1-unused0            #x10d1)
   (flava-sage                   #x10d2)
