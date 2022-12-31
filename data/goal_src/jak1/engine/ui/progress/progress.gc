@@ -684,7 +684,7 @@
 ;; manually set up game-counts
 (define *game-counts* (the game-count-info (malloc 'global 10000)))
 (set! (-> *game-counts* type) game-count-info)
-(set! (-> *game-counts* length) 41)
+(set! (-> *game-counts* length) (length *level-load-list*))
 
 (defun load-game-counts-from-load-info-index ()
   "Find level-load-info by index"
