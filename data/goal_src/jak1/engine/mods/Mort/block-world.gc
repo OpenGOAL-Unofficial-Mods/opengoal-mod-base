@@ -1,0 +1,29 @@
+;;-*-Lisp-*-
+(in-package goal)
+
+;; name: block-world.gc
+;; name in dgo: block-world
+;; dgos: TODO
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Level Variables
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+(define block-world-load-level-id 22)
+(define block-world-num-chicks 0)
+(define block-world-spawn-point 0)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Main loop
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+(defun block-world-main-loop ()
+
+(none))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Level functions
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
