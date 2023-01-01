@@ -32,7 +32,7 @@
     },// WARPGATE
     {
       "trans": [86.1999, 314.0000, 154.5000], 
-      "etype": "eco-yellow",  
+      "etype": "star",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -43,7 +43,7 @@
 
     {
       "trans": [79.0000, 317.0000, 180.5000], 
-      "etype": "eco-yellow",  
+      "etype": "star",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -54,7 +54,7 @@
 
     {
       "trans":  [115.3000, 309.5000, 170.5000],
-      "etype": "eco-yellow",  
+      "etype": "star",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -65,7 +65,7 @@
 
     {
       "trans": [63.0000, 313.0000, 122.9000],
-      "etype": "eco-yellow",  
+      "etype": "star",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -77,7 +77,7 @@
 
     {
       "trans": [122.0000, 313.0000, 122.9000],
-      "etype": "eco-yellow",  
+      "etype": "star",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -89,7 +89,7 @@
 
     {
       "trans": [92.5999, 315.0000, 122.9000],
-      "etype": "eco-yellow",  
+      "etype": "star",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
@@ -378,11 +378,12 @@
     {
       "trans": [60.0000, 300.0000, 160.3999], 
       "etype": "fuel-cell", 
-      "game_task": 0, 
+      "game_task": 92, 
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"block-world-chick-1"
+        "name":"block-world-chick-1",
+        "eco-info": ["int32", 6, 92]
       }//chick
     },
 
@@ -391,54 +392,59 @@
     {
       "trans": [ 85.4000, 305.0000, 150.6000],
       "etype": "fuel-cell", 
-      "game_task": 0, 
+      "game_task": 93, 
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"block-world-chick-2"
+        "name":"block-world-chick-2",
+        "eco-info": ["int32", 6, 93]
       }
     },// chick
 
     {
       "trans": [ 94.0000, 305.0000, 166.6999 ], 
       "etype": "fuel-cell",  
-      "game_task": 0,
+      "game_task": 117,
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"block-world-chick-3"
+        "name":"block-world-chick-3",
+        "eco-info": ["int32", 6, 117]
       }
     },// chick
 
     {
       "trans": [110.8000, 312.5000, 155.0000 ], 
       "etype": "fuel-cell",  
-      "game_task": 0,
+      "game_task": 95,
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"block-world-chick-4"
+        "name":"block-world-chick-4",
+        "eco-info": ["int32", 6, 95]
       }
     },// chick
 
     {
       "trans": [ 97.4000, 300.0000, 195.3000 ], 
       "etype": "fuel-cell",  
-      "game_task": 0,
+      "game_task": 96,
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"block-world-chick-5"
+        "name":"block-world-chick-5",
+        "eco-info": ["int32", 6, 96]
       }
     },// chick
     {
       "trans": [ 130.3999, 310.0000, 179.1999 ], 
       "etype": "fuel-cell",  
-      "game_task": 0,
+      "game_task": 97,
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"block-world-chick-6"
+        "name":"block-world-chick-6",
+        "eco-info": ["int32", 6, 97]
       }
     },// chick
 
