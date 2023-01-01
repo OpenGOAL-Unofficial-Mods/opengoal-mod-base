@@ -2249,9 +2249,9 @@
                                              :name "pyramid-start"
                                              :level 'pyramid
                                              ;;:flags (continue-flags warp)
-                                             :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :trans (new 'static 'vector :x (meters 159.93) :y (meters 300.0) :z (meters 55.74) :w 1.0)
                                              :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
+                                             :camera-trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 53.43) :w 1.0)
                                              :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
                                              :load-commands '()
                                              :vis-nick 'none

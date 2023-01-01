@@ -5,6 +5,8 @@
 ("BWD.DGO"
   ("static-screen.o" "static-screen")
   ("block-world.go" "block-world")
+  ("block-world-code.o" "block-world-code")
+
   ("training-obs.o" "training-obs")
   ("training-part.o" "training-part")
   ("tpage-1309.go" "tpage-1309")
