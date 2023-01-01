@@ -26,7 +26,7 @@
 
 (defun block-world-main-loop ()
 (if (and (= (-> (level-get-target-inside *level*) name) 'block-world )
-    (= 
+    (<= 
         (-> *game-counts* data(-> *level-task-data-remap* (+  block-world-load-level-id -1))money-count)
         (-> *game-info* money-per-level block-world-per-level-id))
     (= 

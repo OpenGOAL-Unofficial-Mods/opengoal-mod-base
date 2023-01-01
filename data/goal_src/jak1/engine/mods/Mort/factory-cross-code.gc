@@ -11,7 +11,7 @@
 (define factory-cross-load-level-id 23)
 (define factory-cross-per-level-id 17)
 (define factory-cross-num-chicks 3)
-(define factory-cross-num-fuel 0)
+(define factory-cross-num-fuel 6)
 (define factory-cross-spawn-point 0)
 
 (define factory-cross-nextCheckpoint "holly-wood-start")
@@ -26,7 +26,7 @@
 
 (defun factory-cross-main-loop ()
 (if (and (= (-> (level-get-target-inside *level*) name) 'factory-cross )
-    (= 
+    (<= 
         (-> *game-counts* data(-> *level-task-data-remap* (+  factory-cross-load-level-id -1))money-count)
         (-> *game-info* money-per-level factory-cross-per-level-id))
     (= 
