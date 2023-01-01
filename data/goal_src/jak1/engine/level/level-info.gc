@@ -2020,7 +2020,7 @@
                            :visname 'block-world-vis ;; name + -vis
                            :nickname 'bwd          ;; nickname
                            :customname "Welcome to Block World!"
-                           :custom-orb-count 25
+                           :custom-orb-count 55
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()

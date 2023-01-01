@@ -10,7 +10,7 @@
   // Background mesh file.
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
-  // only have 1.
+  // only have 1.gate
   "gltf_file": "custom_levels/block-world/test-zone2.glb",
   "automatic_wall_detection": true,
   "automatic_wall_angle": 45.0,
@@ -27,74 +27,74 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-warp-gate"
       }
     },// WARPGATE
     {
       "trans": [86.1999, 314.0000, 154.5000], 
-      "etype": "eco-yellow",  
+      "etype": "star",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-star-1"
       }
     },// star
 
     {
       "trans": [79.0000, 317.0000, 180.5000], 
-      "etype": "eco-yellow",  
+      "etype": "star",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-star-2"
       }
     },// star
 
     {
       "trans":  [115.3000, 309.5000, 170.5000],
-      "etype": "eco-yellow",  
+      "etype": "star",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-star-3"
       }
     },// star
 
     {
       "trans": [63.0000, 313.0000, 122.9000],
-      "etype": "eco-yellow",  
+      "etype": "star",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-star-4"
       }
     },// star
 
 
     {
       "trans": [122.0000, 313.0000, 122.9000],
-      "etype": "eco-yellow",  
+      "etype": "star",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-star-5"
       }
     },// star
 
 
     {
       "trans": [92.5999, 315.0000, 122.9000],
-      "etype": "eco-yellow",  
+      "etype": "star",  
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-star-6"
       }
     },// star
 
@@ -105,7 +105,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-1"
       }
     },// coin
 
@@ -116,7 +116,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-2"
       }
     },// coin
 
@@ -127,7 +127,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-3"
       }
     },// coin
 
@@ -138,7 +138,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-4"
       }
     },// coin
 
@@ -149,7 +149,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-5"
       }
     },// coin
 
@@ -160,7 +160,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-6"
       }
     },// coin
 
@@ -171,7 +171,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-7"
       }
     },// coin
 
@@ -182,7 +182,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-8"
       }
     },// coin
 
@@ -193,7 +193,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-9"
       }
     },// coin
 
@@ -204,7 +204,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-10"
       }
     },// coin
 
@@ -215,7 +215,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-11"
       }
     },// coin
 
@@ -226,7 +226,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-12"
       }
     },// coin
 
@@ -237,7 +237,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-13"
       }
     },// coin
 
@@ -248,7 +248,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-14"
       }
     },// coin
 
@@ -259,7 +259,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-15"
       }
     },// coin
 
@@ -270,7 +270,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-16"
       }
     },// coin
 
@@ -281,7 +281,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-17"
       }
     },// coin
 
@@ -292,7 +292,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-18"
       }
     },// coin
 
@@ -303,7 +303,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-19"
       }
     },// coin
 
@@ -314,7 +314,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-20"
       }
     },// coin
 
@@ -325,7 +325,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-21"
       }
     },// coin
 
@@ -336,7 +336,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-22"
       }
     },// coin
 
@@ -347,7 +347,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-23"
       }
     },// coin
 
@@ -358,7 +358,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-24"
       }
     },// coin
 
@@ -369,7 +369,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-money-25"
       }
     },// coin
 
@@ -378,11 +378,12 @@
     {
       "trans": [60.0000, 300.0000, 160.3999], 
       "etype": "fuel-cell", 
-      "game_task": 0, 
+      "game_task": 92, 
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-chick-1",
+        "eco-info": ["int32", 6, 92]
       }//chick
     },
 
@@ -391,54 +392,59 @@
     {
       "trans": [ 85.4000, 305.0000, 150.6000],
       "etype": "fuel-cell", 
-      "game_task": 0, 
+      "game_task": 93, 
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-chick-2",
+        "eco-info": ["int32", 6, 93]
       }
     },// chick
 
     {
       "trans": [ 94.0000, 305.0000, 166.6999 ], 
       "etype": "fuel-cell",  
-      "game_task": 0,
+      "game_task": 117,
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-chick-3",
+        "eco-info": ["int32", 6, 117]
       }
     },// chick
 
     {
       "trans": [110.8000, 312.5000, 155.0000 ], 
       "etype": "fuel-cell",  
-      "game_task": 0,
+      "game_task": 95,
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-chick-4",
+        "eco-info": ["int32", 6, 95]
       }
     },// chick
 
     {
       "trans": [ 97.4000, 300.0000, 195.3000 ], 
       "etype": "fuel-cell",  
-      "game_task": 0,
+      "game_task": 96,
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-chick-5",
+        "eco-info": ["int32", 6, 96]
       }
     },// chick
     {
       "trans": [ 130.3999, 310.0000, 179.1999 ], 
       "etype": "fuel-cell",  
-      "game_task": 0,
+      "game_task": 97,
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-chick-6",
+        "eco-info": ["int32", 6, 97]
       }
     },// chick
 
@@ -449,7 +455,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-egg-noclue-1"
       }
     },// egg fucking have no clue
 
@@ -460,7 +466,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-egg-noclue-2"
       }
     },// egg fucking have no clue
 
@@ -471,7 +477,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-egg-spring-1"
       }
     },// egg spring
 
@@ -482,7 +488,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-egg-magnet-1"
       }
     },// egg magnet
 
@@ -493,7 +499,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
       "lump": {
-        "name":"test-fuel-cell"
+        "name":"block-world-egg-spring-2"
       }
     },// egg spring
 
@@ -507,7 +513,7 @@
       "quat" : [0, 0, 0, 1], 
       "bsphere": [-5.4630, 17.4553, 1.6169, 10], 
       "lump": {
-        "name":"test-eco"
+        "name":"block-world-eco-what-is-this"
       }
     }
   ]
