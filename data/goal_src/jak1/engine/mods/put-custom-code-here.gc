@@ -27,6 +27,20 @@
      (if (and  (= (-> (level-get-target-inside *level*) name) 'block-world )(=  (mod (-> *display* base-frame-counter) 2) 0 ))
 (block-world-main-loop))
 
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'pyramid)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(pyramid-main-loop))
+
+ (if (and  
+ (= (-> (level-get-target-inside *level*) name) 'training)
+ (=  (mod (-> *display* base-frame-counter) 2) 0 ) 
+ (or (!= (-> *game-info* money) 0.0)(!= (-> *game-info* fuel) 0.0)))
+ (begin
+ 
+ (set! (-> *game-info* mode) 'debug)
+ (initialize! *game-info* 'game (the-as game-save #f) (the-as string #f))
+(set! (-> *game-info* mode) 'play)
+ )
+ )
  (when *cheat-mode* (with-dma-buffer-add-bucket ((testbuf (-> (current-frame) debug-buf)) (bucket-id debug-no-zbuf))
               ;(draw-string-xy (string-format "menu l/r ~d, menu u/d ~d" page col-int) testbuf 10 50 (font-color green) (font-flags shadow kerning))
               (when #t

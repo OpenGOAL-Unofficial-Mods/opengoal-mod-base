@@ -5,4 +5,5 @@
 ("PYR.DGO"
   ("static-screen.o" "static-screen")
   ("pyramid.go" "pyramid")
+  ("pyramid-code.o" "pyramid-code")
   )
