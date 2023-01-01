@@ -5,4 +5,5 @@
 ("FAC.DGO"
   ("static-screen.o" "static-screen")
   ("cube-face.go" "cube-face")
+  ("cube-face-code.o" "cube-face-code")
   )

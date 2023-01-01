@@ -2063,7 +2063,7 @@
                            :visname 'factory-cross-vis ;; name + -vis
                            :nickname 'cro          ;; nickname
                            :customname "Factory Cross"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2106,7 +2106,7 @@
                            :visname 'holly-wood-vis ;; name + -vis
                            :nickname 'hol          ;; nickname
                            :customname "Holly Wood"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2117,7 +2117,7 @@
                            :ocean #f
                            :sky #t
                            :continues '((new 'static 'continue-point
-                                             :name "holly-world-start"
+                                             :name "holly-wood-start"
                                              :level 'holly-wood
                                              ;;:flags (continue-flags warp)
                                              :trans (new 'static 'vector :x (meters 32.93) :y (meters 300.0) :z (meters 152.43) :w 1.0)
@@ -2149,7 +2149,7 @@
                            :visname 'monument-vis ;; name + -vis
                            :nickname 'mon         ;; nickname
                            :customname "monument"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2192,7 +2192,7 @@
                            :visname 'cathederal-vis ;; name + -vis
                            :nickname 'cat          ;; nickname
                            :customname "Cathederal"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2278,7 +2278,7 @@
                            :visname 'ice-canyon-vis ;; name + -vis
                            :nickname 'can          ;; nickname
                            :customname "Ice Canyon"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2321,7 +2321,7 @@
                            :visname 'coins-vis ;; name + -vis
                            :nickname 'coi          ;; nickname
                            :customname "Coins"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2364,7 +2364,7 @@
                            :visname 'villa-cube-vis ;; name + -vis
                            :nickname 'vil         ;; nickname
                            :customname "Villa cube"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2407,7 +2407,7 @@
                            :visname 'ice-slide-vis ;; name + -vis
                            :nickname 'sli          ;; nickname
                            :customname "ice Slide"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2450,7 +2450,7 @@
                            :visname 'islands-vis ;; name + -vis
                            :nickname 'isl          ;; nickname
                            :customname "Islands"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2493,7 +2493,7 @@
                            :visname 'glass-towers-vis ;; name + -vis
                            :nickname 'gla          ;; nickname
                            :customname "Glass towers"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2536,7 +2536,7 @@
                            :visname 'chemical-factory-vis ;; name + -vis
                            :nickname 'che          ;; nickname
                            :customname "Chemical factory"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2579,7 +2579,7 @@
                            :visname 'space-bridge-vis ;; name + -vis
                            :nickname 'spa          ;; nickname
                            :customname "Space Bridge"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2622,7 +2622,7 @@
                            :visname 'chicks-vis ;; name + -vis
                            :nickname 'chi          ;; nickname
                            :customname "Chicks"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2665,7 +2665,7 @@
                            :visname 'garden-vis ;; name + -vis
                            :nickname 'gar          ;; nickname
                            :customname "garden"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2708,7 +2708,7 @@
                            :visname 'cold-pipe-vis ;; name + -vis
                            :nickname 'COL          ;; nickname
                            :customname "Cold pipe"
-                           :custom-orb-count 8
+                           :custom-orb-count 0
                            :custom-buzzer-count 2
                            :packages '()
                            :sound-banks '()
@@ -2751,7 +2751,7 @@
                            :visname 'block-man-vis ;; name + -vis
                            :nickname 'man          ;; nickname
                            :customname "Block Man"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()
@@ -2794,7 +2794,7 @@
                            :visname 'cube-face-vis ;; name + -vis
                            :nickname 'FAC          ;; nickname
                            :customname "Cube Face"
-                           :custom-orb-count 5
+                           :custom-orb-count 0
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()

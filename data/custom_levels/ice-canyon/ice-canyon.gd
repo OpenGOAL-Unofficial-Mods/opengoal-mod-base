@@ -5,4 +5,5 @@
 ("CAN.DGO"
   ("static-screen.o" "static-screen")
   ("ice-canyon.go" "ice-canyon")
+  ("ice-canyon-code.o" "ice-canyon-code")
   )

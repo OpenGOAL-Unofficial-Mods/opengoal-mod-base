@@ -5,4 +5,5 @@
 ("SLI.DGO"
   ("static-screen.o" "static-screen")
   ("ice-slide.go" "ice-slide")
+  ("ice-slide-code.o" "ice-slide-code")
   )

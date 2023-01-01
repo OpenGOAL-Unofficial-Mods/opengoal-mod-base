@@ -5,4 +5,5 @@
 ("VIL.DGO"
   ("static-screen.o" "static-screen")
   ("villa-cube.go" "villa-cube")
+  ("villa-cube-code.o" "villa-cube-code")
   )

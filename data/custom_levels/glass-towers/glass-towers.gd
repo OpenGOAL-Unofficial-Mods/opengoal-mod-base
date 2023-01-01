@@ -5,4 +5,5 @@
 ("GLA.DGO"
   ("static-screen.o" "static-screen")
   ("glass-towers.go" "glass-towers")
+  ("glass-towers-code.o" "glass-towers-code")
   )

@@ -5,4 +5,5 @@
 ("MAN.DGO"
   ("static-screen.o" "static-screen")
   ("block-man.go" "block-man")
+  ("block-man-code.o" "block-man-code")
   )

@@ -5,4 +5,5 @@
 ("COI.DGO"
   ("static-screen.o" "static-screen")
   ("coins.go" "coins")
+  ("coins-code.o" "coins-code")
   )

@@ -5,4 +5,5 @@
 ("SPA.DGO"
   ("static-screen.o" "static-screen")
   ("space-bridge.go" "space-bridge")
+  ("space-bridge-code.o" "space-bridge-code")
   )

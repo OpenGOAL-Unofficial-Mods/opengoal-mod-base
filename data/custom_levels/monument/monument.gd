@@ -5,4 +5,5 @@
 ("MON.DGO"
   ("static-screen.o" "static-screen")
   ("monument.go" "monument")
+  ("monument-code.o" "monument-code")
   )

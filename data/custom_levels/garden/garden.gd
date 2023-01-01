@@ -5,4 +5,5 @@
 ("GAR.DGO"
   ("static-screen.o" "static-screen")
   ("garden.go" "garden")
+  ("garden-code.o" "garden-code")
   )
