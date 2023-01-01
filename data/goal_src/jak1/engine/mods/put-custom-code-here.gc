@@ -23,7 +23,8 @@
 
     (defun runs-every-frame ()
       ;;(increase-power-cell-by-one) This is a call to increase-power-cell-by-one defined in define-custom-functions-here.gc
-
+     (if (= (-> (level-get-target-inside *level*) name) 'block-world )
+(block-world-main-loop))
 
  (when *cheat-mode* (with-dma-buffer-add-bucket ((testbuf (-> (current-frame) debug-buf)) (bucket-id debug-no-zbuf))
               ;(draw-string-xy (string-format "menu l/r ~d, menu u/d ~d" page col-int) testbuf 10 50 (font-color green) (font-flags shadow kerning))
@@ -37,7 +38,8 @@
       (none)
       ))
       (none)
-    )
+      )
+    
 
     (defun runs-on-orb-pickup ((parent process-tree))
       (let* ((from-cache? (and parent (type-type? (-> parent type) orb-cache-top))))
