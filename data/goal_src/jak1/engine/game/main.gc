@@ -364,6 +364,8 @@
 ;; Cheat Codes
 ;;;;;;;;;;;;;;;;;;;;;;
 
+(defun-extern testchick (none))
+(defun-extern spawntestchick (none))
 (define *cheat-temp* (the-as (pointer int32) (malloc 'global 20))) ;; 16 -> 20 (PAL)
 (define *master-exit* #f)
 (define *progress-cheat* #f)
@@ -371,6 +373,19 @@
 
 (defun main-cheats ()
   "Handle cheat codes and timeout"
+
+
+ (when (and
+               (cpad-pressed? 0 up)
+               )
+    (testchick)
+      )
+
+     (when (and
+               (cpad-pressed? 0 down)
+               )
+    (spawntestchick)
+      )
 
   ;; look for codes when L3 is pushed
   (when (and (cpad-hold? 0 l3)

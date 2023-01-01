@@ -18,11 +18,11 @@
   // if your mesh has triangles with incorrect orientation, set this to make all collision mesh triangles double sided
   // this makes collision 2x slower and bigger, so only use if really needed
   "double_sided_collide": false,
-
+  "base_id": 6300000,
   "actors" : [
     {
-      "trans": [-21.6238, 20.0496, 17.1191], // translation
-      "etype": "fuel-cell",  // actor type
+      "trans": [55.3720, 55.3720, 55.3720],// translation
+      "etype": "fuel-cell",  // chick
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
@@ -30,28 +30,92 @@
         "name":"test-fuel-cell"
       }
     },
-
-    {
-      "trans": [-15.2818, 15.2461, 17.1360], // translation
-      "etype": "crate",  // actor type
+ 
+   {
+      "trans": [230.6947, 230.6947, 230.6947],// translation
+      "etype": "fuel-cell",  // chick
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-15.2818, 15.2461, 17.1360, 10], // bounding sphere
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
       "lump": {
-        "name":"test-crate",
-        "crate-type":"'steel",
-        "eco-info": ["int32", 5, 10]
+        "name":"test-fuel-cell"
       }
     },
-
-    {
-      "trans": [-5.4630, 17.4553, 1.6169], // translation
-      "etype": "eco-yellow",  // actor type
+ 
+   {
+      "trans": [185.2467, 185.2467, 185.2467],// translation
+      "etype": "fuel-cell",  // chick
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-5.4630, 17.4553, 1.6169, 10], // bounding sphere
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
       "lump": {
-        "name":"test-eco"
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [50.6325, 50.6325, 50.6325],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [44.2478, 44.2478, 44.2478],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [180.6127, 180.6127, 180.6127],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [106.6069, 106.6069, 106.6069],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [231.1719, 231.1719, 231.1719],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [222.1423, 222.1423, 222.1423],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
       }
     }
   ]

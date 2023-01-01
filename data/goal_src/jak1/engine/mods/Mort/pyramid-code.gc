@@ -26,7 +26,7 @@
 
 (defun pyramid-main-loop ()
 (if (and (= (-> (level-get-target-inside *level*) name) 'pyramid )
-    (= 
+    (<= 
         (-> *game-counts* data(-> *level-task-data-remap* (+  pyramid-load-level-id -1))money-count)
         (-> *game-info* money-per-level pyramid-per-level-id))
     (= 

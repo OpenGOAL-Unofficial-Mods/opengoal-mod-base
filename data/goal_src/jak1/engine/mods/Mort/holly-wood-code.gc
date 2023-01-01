@@ -11,7 +11,7 @@
 (define holly-wood-load-level-id 24)
 (define holly-wood-per-level-id 18)
 (define holly-wood-num-chicks 3)
-(define holly-wood-num-fuel 0)
+(define holly-wood-num-fuel 6)
 (define holly-wood-spawn-point 0)
 
 (define holly-wood-nextCheckpoint "monument-start")
@@ -26,7 +26,7 @@
 
 (defun holly-wood-main-loop ()
 (if (and (= (-> (level-get-target-inside *level*) name) 'holly-wood )
-    (= 
+    (<= 
         (-> *game-counts* data(-> *level-task-data-remap* (+  holly-wood-load-level-id -1))money-count)
         (-> *game-info* money-per-level holly-wood-per-level-id))
     (= 

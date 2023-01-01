@@ -18,11 +18,11 @@
   // if your mesh has triangles with incorrect orientation, set this to make all collision mesh triangles double sided
   // this makes collision 2x slower and bigger, so only use if really needed
   "double_sided_collide": false,
-
+  "base_id": 2000000,
   "actors" : [
     {
-      "trans": [-21.6238, 20.0496, 17.1191], // translation
-      "etype": "fuel-cell",  // actor type
+      "trans": [-37.6886, -37.6886, -37.6886],// translation
+      "etype": "fuel-cell",  // chick
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
@@ -30,28 +30,92 @@
         "name":"test-fuel-cell"
       }
     },
-
-    {
-      "trans": [-15.2818, 15.2461, 17.1360], // translation
-      "etype": "crate",  // actor type
+ 
+   {
+      "trans": [-9.6014, -9.6014, -9.6014],// translation
+      "etype": "fuel-cell",  // chick
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-15.2818, 15.2461, 17.1360, 10], // bounding sphere
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
       "lump": {
-        "name":"test-crate",
-        "crate-type":"'steel",
-        "eco-info": ["int32", 5, 10]
+        "name":"test-fuel-cell"
       }
     },
-
-    {
-      "trans": [-5.4630, 17.4553, 1.6169], // translation
-      "etype": "eco-yellow",  // actor type
+ 
+   {
+      "trans": [-37.3034, -37.3034, -37.3034],// translation
+      "etype": "fuel-cell",  // chick
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-5.4630, 17.4553, 1.6169, 10], // bounding sphere
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
       "lump": {
-        "name":"test-eco"
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [29.4828, 29.4828, 29.4828],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [-66.8517, -66.8517, -66.8517],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [-24.7681, -24.7681, -24.7681],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [45.0569, 45.0569, 45.0569],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [16.4883, 16.4883, 16.4883],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [-66.7373, -66.7373, -66.7373],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
       }
     }
   ]

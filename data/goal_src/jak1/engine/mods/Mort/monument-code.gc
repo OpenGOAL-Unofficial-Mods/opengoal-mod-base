@@ -11,7 +11,7 @@
 (define monument-load-level-id 25)
 (define monument-per-level-id 19)
 (define monument-num-chicks 3)
-(define monument-num-fuel 0)
+(define monument-num-fuel 8)
 (define monument-spawn-point 0)
 
 (define monument-nextCheckpoint "cathederal-start")

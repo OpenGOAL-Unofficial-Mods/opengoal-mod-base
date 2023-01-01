@@ -11,7 +11,7 @@
 (define cathederal-load-level-id 26)
 (define cathederal-per-level-id 20)
 (define cathederal-num-chicks 3)
-(define cathederal-num-fuel 0)
+(define cathederal-num-fuel 10)
 (define cathederal-spawn-point 0)
 
 (define cathederal-nextCheckpoint "pyramid-start")
@@ -26,7 +26,7 @@
 
 (defun cathederal-main-loop ()
 (if (and (= (-> (level-get-target-inside *level*) name) 'cathederal )
-    (= 
+    (<= 
         (-> *game-counts* data(-> *level-task-data-remap* (+  cathederal-load-level-id -1))money-count)
         (-> *game-info* money-per-level cathederal-per-level-id))
     (= 

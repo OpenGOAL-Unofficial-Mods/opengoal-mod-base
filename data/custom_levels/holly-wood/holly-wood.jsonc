@@ -14,15 +14,15 @@
   "gltf_file": "custom_levels/holly-wood/test-zone2.glb",
   "automatic_wall_detection": true,
   "automatic_wall_angle": 45.0,
-
+  "base_id": 8000000,
   // if your mesh has triangles with incorrect orientation, set this to make all collision mesh triangles double sided
   // this makes collision 2x slower and bigger, so only use if really needed
   "double_sided_collide": false,
 
   "actors" : [
     {
-      "trans": [-21.6238, 20.0496, 17.1191], // translation
-      "etype": "fuel-cell",  // actor type
+      "trans": [-24.6687, -24.6687, -24.6687],// translation
+      "etype": "fuel-cell",  // chick
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
@@ -30,28 +30,59 @@
         "name":"test-fuel-cell"
       }
     },
-
-    {
-      "trans": [-15.2818, 15.2461, 17.1360], // translation
-      "etype": "crate",  // actor type
+ 
+   {
+      "trans": [-46.4327, -46.4327, -46.4327],// translation
+      "etype": "fuel-cell",  // chick
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-15.2818, 15.2461, 17.1360, 10], // bounding sphere
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
       "lump": {
-        "name":"test-crate",
-        "crate-type":"'steel",
-        "eco-info": ["int32", 5, 10]
+        "name":"test-fuel-cell"
       }
     },
-
-    {
-      "trans": [-5.4630, 17.4553, 1.6169], // translation
-      "etype": "eco-yellow",  // actor type
+ 
+   {
+      "trans": [-69.4705, -69.4705, -69.4705],// translation
+      "etype": "fuel-cell",  // chick
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-5.4630, 17.4553, 1.6169, 10], // bounding sphere
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
       "lump": {
-        "name":"test-eco"
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [27.0001, 27.0001, 27.0001],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [-33.0198, -33.0198, -33.0198],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
+      }
+    },
+ 
+   {
+      "trans": [-67.4411, -67.4411, -67.4411],// translation
+      "etype": "fuel-cell",  // chick
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "lump": {
+        "name":"test-fuel-cell"
       }
     }
   ]

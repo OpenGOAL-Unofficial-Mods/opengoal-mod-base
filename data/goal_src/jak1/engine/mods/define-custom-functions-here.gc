@@ -14,18 +14,28 @@
  the powercell count by one when it is called
  |#
 
+
 (define vectortest (new 'static 'vector :x 0.0 :y 0.0 :z 0.0))
-(defun testchick ((x float) (y float) (z float))
+(define lastchick (new 'static 'vector :x 0.0 :y 0.0 :z 0.0))
+(defun testchick ()
 ;;(defbehavior birth-pickup-at-point process ((arg0 vector) (arg1 pickup-type) (arg2 float) (arg3 symbol) (arg4 process-tree) (arg5 fact-info))
-(set! (-> vectortest x) (meters x))
-(set! (-> vectortest y) (meters y))
-(set! (-> vectortest z) (meters z))
+(set! (-> vectortest x) (/ (-> (target-pos 0) x)4096))
+(set! (-> vectortest y) (/ (-> (target-pos 0) y)4096))
+(set! (-> vectortest z) (/ (-> (target-pos 0) z)4096))
+
+(set! (-> lastchick x) (/ (-> (target-pos 0) x)4096))
+(set! (-> lastchick y) (/ (-> (target-pos 0) y)4096))
+(set! (-> lastchick z) (/ (-> (target-pos 0) z)4096))
+(format #t ":[~f, ~f, ~f],: ~%" (-> vectortest x) (-> vectortest y) (-> vectortest z))
+;;[37.0000, 300.0000, 112.9000], 
+(none)
+)
+
+(defun spawntestchick ()
 (birth-pickup-at-point 
-vectortest
+lastchick
 (pickup-type eco-pill) 1.0 
 #f *target* (the-as fact-info #f))
-(format #t ":[~f, ~f, ~f],: ~%" x y z)
-;;[37.0000, 300.0000, 112.9000], 
 (none)
 )
 
