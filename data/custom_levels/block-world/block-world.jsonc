@@ -273,7 +273,16 @@
         "name":"block-world-money-16"
       }
     },// coin
-
+    {
+      "trans":  [52.2000, 312.0000, 122.9000],
+      "etype": "money",  
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1], 
+      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
+      "lump": {
+        "name":"block-world-money-18"
+      }
+    },
     {
       "trans": [73.8000, 312.0000, 122.9000],
       "etype": "money",  
@@ -285,16 +294,7 @@
       }
     },// coin
 
-    {
-      "trans":  [52.2000, 312.0000, 122.9000],
-      "etype": "money",  
-      "game_task": 0,
-      "quat" : [0, 0, 0, 1], 
-      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
-      "lump": {
-        "name":"block-world-money-18"
-      }
-    },// coin
+// coin
 
     {
       "trans":  [112.1999, 312.0000, 122.9000],

@@ -21,9 +21,10 @@
     ;; Begin function defintions.
     ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
     (defun runs-every-frame ()
       ;;(increase-power-cell-by-one) This is a call to increase-power-cell-by-one defined in define-custom-functions-here.gc
-     (if (= (-> (level-get-target-inside *level*) name) 'block-world )
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'block-world )(=  (mod (-> *display* base-frame-counter) 2) 0 ))
 (block-world-main-loop))
 
  (when *cheat-mode* (with-dma-buffer-add-bucket ((testbuf (-> (current-frame) debug-buf)) (bucket-id debug-no-zbuf))
