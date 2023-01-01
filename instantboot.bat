@@ -1,0 +1,1 @@
+gk.exe -boot -fakeiso -debug
