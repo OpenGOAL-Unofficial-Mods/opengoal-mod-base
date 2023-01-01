@@ -273,6 +273,8 @@
        )
      (dotimes (v1-53 32)
        (set! (-> obj money-per-level v1-53) (the-as uint 0))
+       (set! (-> obj chicks-per-level v1-53) (the-as uint 0))
+       (set! (-> obj fuel-per-level v1-53) (the-as uint 0))
        (set! (-> obj deaths-per-level v1-53) (the-as uint 0))
        (set! (-> obj enter-level-time v1-53) 0)
        (set! (-> obj in-level-time v1-53) 0)
@@ -434,6 +436,21 @@
      (+! (-> obj money) amount)
      )
     (('fuel-cell)
+
+    (when (< 0.0 amount)
+       (let ((proc (handle->process source)))
+         (when (and proc (-> proc entity))
+           ;; we have task data for this level!
+           (when (>= (-> *level-task-data-remap* length) (-> proc entity extra level info index))
+             ;; get the level index
+             (let ((level-idx (-> *level-task-data-remap* (+ (-> proc entity extra level info index) -1))))
+               ;; increment the level money count
+               (+! (-> obj fuel-per-level level-idx) (the int 1))
+               )
+             )
+           )
+         )
+       )
      ;; got a power cell!
      ;; in this case, the amount is actually the index of the power cell's task
      (let ((s5-1 (the int amount)))

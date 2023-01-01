@@ -5,4 +5,5 @@
 ("CRO.DGO"
   ("static-screen.o" "static-screen")
   ("factory-cross.go" "factory-cross")
+  ("factory-cross-code.o" "factory-cross-code")
   )

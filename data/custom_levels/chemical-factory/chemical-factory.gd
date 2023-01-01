@@ -5,4 +5,5 @@
 ("CHE.DGO"
   ("static-screen.o" "static-screen")
   ("chemical-factory.go" "chemical-factory")
+  ("chemical-factory-code.o" "chemical-factory-code")
   )

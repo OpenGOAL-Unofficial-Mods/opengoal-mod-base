@@ -5,4 +5,5 @@
 ("COL.DGO"
   ("static-screen.o" "static-screen")
   ("cold-pipe.go" "cold-pipe")
+  ("cold-pipe-code.o" "cold-pipe-code")
   )

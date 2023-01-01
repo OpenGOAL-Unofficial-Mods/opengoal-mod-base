@@ -5,4 +5,5 @@
 ("HOL.DGO"
   ("static-screen.o" "static-screen")
   ("holly-wood.go" "holly-wood")
+  ("holly-wood-code.o" "holly-wood-code")
   )

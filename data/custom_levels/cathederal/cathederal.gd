@@ -5,4 +5,5 @@
 ("CAT.DGO"
   ("static-screen.o" "static-screen")
   ("cathederal.go" "cathederal")
+  ("cathederal-code.o" "cathederal-code")
   )

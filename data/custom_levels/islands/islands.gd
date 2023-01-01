@@ -5,4 +5,5 @@
 ("ISL.DGO"
   ("static-screen.o" "static-screen")
   ("islands.go" "islands")
+  ("islands-code.o" "islands-code")
   )

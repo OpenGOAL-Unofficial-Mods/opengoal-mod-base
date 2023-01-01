@@ -5,4 +5,5 @@
 ("CHI.DGO"
   ("static-screen.o" "static-screen")
   ("chicks.go" "chicks")
+  ("chicks-code.o" "chicks-code")
   )

@@ -30,6 +30,53 @@
      (if (and  (= (-> (level-get-target-inside *level*) name) 'pyramid)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
 (pyramid-main-loop))
 
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'block-man)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(block-man-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'cathederal)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(cathederal-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'chemical-factory)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(chemical-factory-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'chicks)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(chicks-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'coins)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(coins-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'cold-pipe)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(cold-pipe-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'factory-cross)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(factory-cross-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'garden)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(garden-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'glass-towers)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(glass-towers-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'holly-wood)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(holly-wood-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'ice-canyon)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(ice-canyon-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'ice-slide)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(ice-slide-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'islands)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(islands-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'monument)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(monument-main-loop))
+
+     (if (and  (= (-> (level-get-target-inside *level*) name) 'space-bridge)(=  (mod (-> *display* base-frame-counter) 2) 0 ))
+(space-bridge-main-loop))
+
+
+
  (if (and  
  (= (-> (level-get-target-inside *level*) name) 'training)
  (=  (mod (-> *display* base-frame-counter) 2) 0 ) 
