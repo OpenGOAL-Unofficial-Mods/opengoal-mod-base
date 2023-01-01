@@ -2235,7 +2235,7 @@
                            :visname 'pyramid-vis ;; name + -vis
                            :nickname 'pyr       ;; nickname
                            :customname "pyramid"
-                           :custom-orb-count 5
+                           :custom-orb-count 47
                            :custom-buzzer-count 5
                            :packages '()
                            :sound-banks '()

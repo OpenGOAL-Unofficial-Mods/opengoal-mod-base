@@ -18,18 +18,8 @@
   // if your mesh has triangles with incorrect orientation, set this to make all collision mesh triangles double sided
   // this makes collision 2x slower and bigger, so only use if really needed
   "double_sided_collide": false,
-  "base_id": 100,
+  "base_id": 1000000,
   "actors" : [
-    {
-      "trans":  [32.0085, 300.1105, 153.0149],
-      "etype": "warp-gate",  
-      "game_task": 0, 
-      "quat" : [0, 0, 0, 1],
-      "bsphere": [-21.6238, 19.3496, 17.1191, 10], 
-      "lump": {
-        "name":"block-world-warp-gate"
-      }
-    },// WARPGATE
     {
       "trans": [86.1999, 314.0000, 154.5000], 
       "etype": "star",  

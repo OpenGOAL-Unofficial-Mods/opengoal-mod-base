@@ -2172,6 +2172,7 @@
  "mods/mods-settings.gc"
  "mods/Mort/.mort-library.gc"
  "mods/Mort/block-world-code.gc"
+ "mods/Mort/pyramid-code.gc"
  "mods/define-custom-functions-here.gc"
  "mods/put-custom-code-here.gc"
 

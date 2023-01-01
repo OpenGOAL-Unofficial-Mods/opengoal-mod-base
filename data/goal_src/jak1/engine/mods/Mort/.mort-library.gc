@@ -9,6 +9,22 @@
 ;; Level functions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(defun level-load-info-by-index ((index int))
+  "Find level-load-info by index"
+  (let ((iter *level-load-list*))
+    (while (not (null? iter))
+      (let* ((sym (the symbol (car iter)))
+             (info (the level-load-info (-> sym value))))
+        (when (= (-> info index) index)
+          ;; match!
+          (return info)
+          )
+        )
+      (set! iter (cdr iter))
+      )
+    )
+  )
+  
 ;;TODO
 
 ;;function that takes in a starting checkpoint and final chick count, then if Jak is close it checks if you need
