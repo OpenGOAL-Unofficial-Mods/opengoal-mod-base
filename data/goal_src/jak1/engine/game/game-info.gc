@@ -437,7 +437,6 @@
      ;; got a power cell!
      ;; in this case, the amount is actually the index of the power cell's task
      (let ((s5-1 (the int amount)))
-    
        (when (not (or (task-complete? obj (the-as game-task s5-1)) (>= (the-as uint 1) (the-as uint s5-1))))
          ;; the cell corresponds to a valid and previously incomplete task.
          ;; update our stats
